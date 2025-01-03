@@ -1,0 +1,82 @@
+baseURL = 'https://elixir.tw/'
+languageCode = 'zh-tw'
+title = 'Elixir Taiwan Blog'
+
+[taxonomies]
+tag = 'tags'
+
+# Google analytics code
+googleAnalytics = "${GOOGLE_ANALYTICS_ID}"
+
+[params]
+# Meta description
+description = "A Tech Blog of Elixir Taiwan"
+
+# Appearance settings
+theme = 'typo'
+colorPalette = 'default'
+hideHeader = false
+
+# Intro on main page, content is markdown
+homeIntroTitle = '歡迎!'
+homeIntroContent = """
+這裡是 Elixir Taiwan 的部落格。我們自 2014 開始在台北舉辦每個月定期的實體聚會，目前依然持續運作中，聚會詳情請參考我們的 facebook/discord/meetup 連結。在這裡我們會分享各種程式相關的新聞、知識與新議題。
+"""
+
+# Collection to display on home
+homeCollectionTitle = 'Posts'
+homeCollection = 'posts'
+
+# Lists parameters
+paginationSize = 100
+listSummaries = true
+listDateFormat = 'Jan 2 2024'
+
+# Breadcrumbs
+breadcrumbs = true
+
+# Social icons
+[[params.social]]
+name = "facebook"
+url = "https://www.facebook.com/groups/elixir.tw"
+
+[[params.social]]
+name = "X"
+url = "https://x.com/elixirtw"
+
+[[params.social]]
+name = "Discord"
+url = "https://discord.com/invite/9zBmPfrrVP"
+
+[[params.social]]
+name = "Meetup"
+url = "https://www.meetup.com/elixirtw-taipei"
+
+# Main menu pages
+[[params.menu]]
+name = "home"
+url = "/"
+
+[[params.menu]]
+name = "posts"
+url = "/posts"
+
+[[params.menu]]
+name = "about"
+url = "/about"
+
+# Syntax highligth on code blocks
+[markup]
+[markup.highlight]
+style = 'algol'
+
+# Giscus comments
+[params.giscus]
+enable = false
+repo = "elixirtw/elixirtw.github.io"
+repoid = "${GISCUS_REPO_ID}"
+category = "Announcements"
+categoryid = "${GISCUS_CATEGORY_ID}"
+mapping = "pathname"
+theme = "preferred_color_scheme"
+datalang = "zh-TW"
