@@ -1,6 +1,7 @@
 baseURL = 'https://elixir.tw/'
 languageCode = 'zh-tw'
 title = 'Elixir Taiwan Blog'
+theme = 'typo'
 
 [taxonomies]
 tag = 'tags'
@@ -13,14 +14,14 @@ googleAnalytics = "${GOOGLE_ANALYTICS_ID}"
 description = "A Tech Blog of Elixir Taiwan"
 
 # Appearance settings
-theme = 'typo'
+theme = 'auto'
 colorPalette = 'default'
 hideHeader = false
 
 # Intro on main page, content is markdown
 homeIntroTitle = '歡迎!'
 homeIntroContent = """
-這裡是 Elixir Taiwan 的部落格。我們自 2014 開始在台北舉辦每個月定期的實體聚會，目前依然持續運作中，聚會詳情請參考我們的 facebook/discord/meetup 連結。在這裡我們會分享各種程式相關的新聞、知識與新議題。
+這裡是 Elixir Taiwan 的部落格。我們自 2014 開始在台北舉辦每個月定期的實體聚會，目前持續運作中，聚會詳情請參考 facebook//meetup 連結。這裡我們會分享各種程式相關的新聞、知識與新議題。
 """
 
 # Collection to display on home
@@ -30,10 +31,10 @@ homeCollection = 'posts'
 # Lists parameters
 paginationSize = 100
 listSummaries = true
-listDateFormat = 'Jan 2 2024'
+listDateFormat = 'Jan 2 2006'
 
 # Breadcrumbs
-breadcrumbs = true
+breadcrumbs = false
 
 # Social icons
 [[params.social]]
