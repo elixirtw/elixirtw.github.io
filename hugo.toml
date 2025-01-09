@@ -21,7 +21,7 @@ hideHeader = false
 # Intro on main page, content is markdown
 homeIntroTitle = '歡迎!'
 homeIntroContent = """
-這裡是 Elixir Taiwan 的部落格。我們自 2014 開始舉辦每個月定期的實體聚會，目前持續運作中，聚會詳情請參考 facebook/meetup 連結。這裡我們會分享各種程式相關的新聞、知識與新議題。
+這裡是 Elixir Taiwan 的部落格。我們自 2014 開始舉辦每個月定期的實體聚會，目前持續運作中，聚會詳情請參考 [facebook](https://www.facebook.com/groups/elixir.tw)/[meetup](https://www.meetup.com/elixirtw-taipei) 連結。這裡我們會分享各種程式相關的新聞、知識與新議題。
 """
 
 # Collection to display on home
@@ -59,16 +59,24 @@ url = "https://www.youtube.com/channel/UCzCRwQKbdBbW9-Vpr--ydZg"
 
 # Main menu pages
 [[params.menu]]
-name = "home"
+name = "首頁"
 url = "/"
 
 [[params.menu]]
-name = "posts"
+name = "文章"
 url = "/posts"
 
 [[params.menu]]
-name = "about"
+name = "學習資源"
+url = "/resources"
+
+[[params.menu]]
+name = "關於我們"
 url = "/about"
+
+[[params.menu]]
+name = "小聚"
+url = "/meetup"
 
 # Syntax highligth on code blocks
 [markup]
