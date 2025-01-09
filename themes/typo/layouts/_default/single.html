@@ -36,7 +36,9 @@
 
       {{ if .Param "readTime" }}
       &nbsp; · &nbsp;
-      {{ .ReadingTime }} min read
+      {{ $readingTime := div (float .WordCount) .Site.Params.reading_speed }}
+      {{ $readingTime = math.Ceil $readingTime }}
+      {{ $readingTime }} min read
       {{end }}
     </p>
 
