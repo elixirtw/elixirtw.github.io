@@ -86,6 +86,10 @@ url = "/meetup"
 [markup.highlight]
 style = 'algol'
 
+[markup.goldmark]
+[markup.goldmark.renderer]
+unsafe = true
+
 ## ReadingTime
 [languages]
 [languages.en]
