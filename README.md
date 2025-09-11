@@ -24,4 +24,4 @@ make server
 ```shell
 make build
 ```
-7. Send a pull request to our repo at [elixirtw/elixirtw.github.io」(https://github.com/elixirtw/elixirtw.github.io)
+7. Send a pull request to our repo at [elixirtw/elixirtw.github.io](https://github.com/elixirtw/elixirtw.github.io)
