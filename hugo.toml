@@ -2,7 +2,6 @@ baseURL = 'https://elixir.tw/'
 languageCode = 'zh-tw'
 title = 'Elixir Taiwan Blog'
 theme = 'typo'
-hasCJKLanguage = true
 
 [taxonomies]
 tag = 'tags'
@@ -38,6 +37,7 @@ listDateFormat = 'Jan 2 2006'
 breadcrumbs = false
 
 # CJK lanugage
+hasCJKLanguage = true
 
 # Social icons
 [[params.social]]
