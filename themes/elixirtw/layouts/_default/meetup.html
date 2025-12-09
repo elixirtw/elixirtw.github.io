@@ -1,0 +1,261 @@
+{{ define "main" }}
+<!-- Hero Section -->
+<section class="relative py-20 overflow-hidden" style="background-color: var(--bg-primary);">
+  <div class="absolute inset-0 bg-grid opacity-20 hidden dark:block"></div>
+  <div class="absolute top-20 left-10 w-80 h-80 bg-elixir-600/15 rounded-full blur-3xl hidden dark:block"></div>
+
+  <div class="container-custom relative z-10">
+    <div class="max-w-3xl">
+      <span class="tag mb-4">每月活動</span>
+      <h1 class="text-gradient mb-6">Elixir Taiwan 小聚</h1>
+      <p class="text-xl leading-relaxed" style="color: var(--text-secondary);">
+        自 2014 年起，我們每月定期舉辦實體聚會。不論你是 Elixir 新手還是資深開發者，都歡迎加入我們的交流行列！
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- Next Event Section -->
+<section class="section" style="background-color: var(--section-alt-bg);">
+  <div class="container-custom">
+    <div class="card border-elixir-500/30 p-8 md:p-12" style="background: linear-gradient(to bottom right, rgba(139, 92, 246, 0.1), rgba(15, 23, 42, 0.1));">
+      <div class="grid lg:grid-cols-2 gap-8 items-center">
+        <div>
+          <span class="tag mb-4">下一場活動</span>
+          <h2 class="mb-6" style="color: var(--text-heading);">報名參加小聚</h2>
+          <div class="space-y-4 mb-6" style="color: var(--text-secondary);">
+            <div class="flex items-start gap-3">
+              <svg class="w-5 h-5 text-elixir-400 shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+              </svg>
+              <div>
+                <p class="font-medium" style="color: var(--text-heading);">時間</p>
+                <p>每月最後一個週二，19:30 開始</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-3">
+              <svg class="w-5 h-5 text-elixir-400 shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+              </svg>
+              <div>
+                <p class="font-medium" style="color: var(--text-heading);">地點</p>
+                <p>五倍學院 / 言文字（台北市區）</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-3">
+              <svg class="w-5 h-5 text-elixir-400 shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+              </svg>
+              <div>
+                <p class="font-medium" style="color: var(--text-heading);">費用</p>
+                <p>免費（場地飲料費自理）</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex flex-wrap gap-4">
+            <a href="{{ .Site.Params.social.meetup }}" target="_blank" rel="noopener" class="btn btn-primary">
+              <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M6.98 21.28c-1.778-.135-3.116-.627-4.18-1.59C1.322 18.356.51 16.122.786 14.188c.168-1.186.637-2.118 1.542-3.066.522-.545.923-.852 1.67-1.272.614-.345.796-.488.796-.623 0-.067-.05-.244-.113-.395-.209-.51-.275-.828-.275-1.358.001-.776.19-1.358.65-2.007.326-.457.91-.971 1.373-1.206.225-.114.258-.146.258-.252 0-.205.134-.61.308-.93.46-.852 1.326-1.46 2.48-1.742.388-.095 1.208-.125 1.591-.058 1.055.183 1.913.69 2.475 1.465.225.31.496.836.579 1.122.056.191.063.2.291.368.96.703 1.605 1.682 1.81 2.748.083.428.086 1.187.007 1.573-.138.668-.383 1.217-.76 1.7-.1.128-.183.25-.183.27 0 .021.048.124.107.23.365.654.575 1.512.575 2.35 0 1.41-.527 2.593-1.572 3.526-.78.696-1.79 1.143-3.017 1.335-.488.076-1.48.1-1.943.046l-.288-.033-.17.2c-.584.694-1.416 1.216-2.374 1.49-.51.146-1.386.226-1.923.177z"/>
+              </svg>
+              Meetup 報名
+            </a>
+            <a href="https://lu.ma/calendar/cal-gGZDVDM4NFE48Ks" target="_blank" rel="noopener" class="btn btn-secondary">
+              <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+              </svg>
+              Luma 行事曆
+            </a>
+          </div>
+        </div>
+
+        <div class="hidden lg:block">
+          <div class="backdrop-blur-sm rounded-2xl border p-8 text-center" style="background-color: var(--bg-card); border-color: var(--border-primary);">
+            <div class="text-6xl mb-4">
+              <svg class="w-20 h-20 mx-auto text-elixir-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>
+              </svg>
+            </div>
+            <p class="text-elixir-400 font-semibold text-lg">歡迎 Walk-in</p>
+            <p class="mt-2" style="color: var(--text-tertiary);">無需報名也可以直接來參加！</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Event Flow Section -->
+<section class="section" style="background-color: var(--bg-primary);">
+  <div class="container-custom">
+    <div class="text-center mb-16">
+      <h2 class="text-gradient mb-4">聚會流程</h2>
+      <p class="text-lg max-w-2xl mx-auto" style="color: var(--text-tertiary);">
+        輕鬆自在的交流形式，沒有笨問題，只有互動交流
+      </p>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-8">
+      <div class="card card-hover text-center">
+        <div class="w-16 h-16 rounded-full bg-elixir-600/20 flex items-center justify-center mx-auto mb-6">
+          <span class="text-2xl font-bold text-elixir-400">1</span>
+        </div>
+        <h3 class="text-xl font-semibold mb-3" style="color: var(--text-heading);">自我介紹</h3>
+        <p style="color: var(--text-secondary);">
+          19:30 開始，每個人簡單介紹自己和最近在玩的東西。有問題想討論也可以先提出來！
+        </p>
+        <p class="text-sm mt-3" style="color: var(--text-muted);">「我只是來聽聽」也完全 OK</p>
+      </div>
+
+      <div class="card card-hover text-center">
+        <div class="w-16 h-16 rounded-full bg-elixir-600/20 flex items-center justify-center mx-auto mb-6">
+          <span class="text-2xl font-bold text-elixir-400">2</span>
+        </div>
+        <h3 class="text-xl font-semibold mb-3" style="color: var(--text-heading);">主題分享</h3>
+        <p style="color: var(--text-secondary);">
+          成員輪流分享技術主題。沒有講者時，大家一起討論最近的話題，或挑戰 AOC、Exercism 題目。
+        </p>
+      </div>
+
+      <div class="card card-hover text-center">
+        <div class="w-16 h-16 rounded-full bg-elixir-600/20 flex items-center justify-center mx-auto mb-6">
+          <span class="text-2xl font-bold text-elixir-400">3</span>
+        </div>
+        <h3 class="text-xl font-semibold mb-3" style="color: var(--text-heading);">討論閒聊</h3>
+        <p style="color: var(--text-secondary);">
+          針對分享內容深入討論，或自由分組聊天。主題不限，技術、職涯、閒聊都歡迎！
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Event Types Section -->
+<section class="section" style="background-color: var(--section-alt-bg);">
+  <div class="container-custom">
+    <div class="text-center mb-16">
+      <h2 class="text-gradient mb-4">活動形式</h2>
+      <p class="text-lg max-w-2xl mx-auto" style="color: var(--text-tertiary);">
+        多元的活動內容，滿足不同學習需求
+      </p>
+    </div>
+
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div class="card">
+        <div class="feature-icon mb-4">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 4v16M17 4v16M3 8h4m10 0h4M3 12h18M3 16h4m10 0h4M4 20h16a1 1 0 001-1V5a1 1 0 00-1-1H4a1 1 0 00-1 1v14a1 1 0 001 1z"/>
+          </svg>
+        </div>
+        <h3 class="text-lg font-semibold mb-2" style="color: var(--text-heading);">主題分享</h3>
+        <p class="text-sm" style="color: var(--text-tertiary);">成員技術分享與經驗談</p>
+      </div>
+
+      <div class="card">
+        <div class="feature-icon mb-4">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z"/>
+          </svg>
+        </div>
+        <h3 class="text-lg font-semibold mb-2" style="color: var(--text-heading);">自由交流</h3>
+        <p class="text-sm" style="color: var(--text-tertiary);">開放式討論與問答</p>
+      </div>
+
+      <div class="card">
+        <div class="feature-icon mb-4">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
+          </svg>
+        </div>
+        <h3 class="text-lg font-semibold mb-2" style="color: var(--text-heading);">讀書會</h3>
+        <p class="text-sm" style="color: var(--text-tertiary);">一起研讀 Elixir 書籍</p>
+      </div>
+
+      <div class="card">
+        <div class="feature-icon mb-4">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/>
+          </svg>
+        </div>
+        <h3 class="text-lg font-semibold mb-2" style="color: var(--text-heading);">工作坊</h3>
+        <p class="text-sm" style="color: var(--text-tertiary);">實作練習與 Pair Programming</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Become a Speaker Section -->
+<section class="section" style="background-color: var(--bg-primary);">
+  <div class="container-custom">
+    <div class="card border-elixir-500/30 p-8 md:p-12" style="background: linear-gradient(to bottom right, rgba(139, 92, 246, 0.1), rgba(15, 23, 42, 0.1));">
+      <div class="grid lg:grid-cols-2 gap-8 items-center">
+        <div>
+          <span class="tag mb-4">講者募集</span>
+          <h2 class="mb-4" style="color: var(--text-heading);">想要分享你的經驗嗎？</h2>
+          <p class="mb-6" style="color: var(--text-secondary);">
+            不管是最近在玩的小東西、工作上遇到的有趣問題、或是任何想要分享的 Elixir 主題，我們都非常歡迎！分享的時間長度可以自由調整，5 分鐘的 Lightning Talk 或 30 分鐘的深度分享都可以。
+          </p>
+          <div class="space-y-3 mb-6" style="color: var(--text-secondary);">
+            <p class="flex items-center gap-2">
+              <svg class="w-5 h-5 text-elixir-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+              </svg>
+              不需要是專家，學習心得也很棒
+            </p>
+            <p class="flex items-center gap-2">
+              <svg class="w-5 h-5 text-elixir-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+              </svg>
+              可以用中文或英文分享
+            </p>
+            <p class="flex items-center gap-2">
+              <svg class="w-5 h-5 text-elixir-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+              </svg>
+              我們會協助你準備內容
+            </p>
+          </div>
+          <a href="{{ .Site.Params.social.discord }}" target="_blank" rel="noopener" class="btn btn-primary">
+            聯絡我們報名
+          </a>
+        </div>
+
+        <div class="space-y-4">
+          <h3 class="text-lg font-semibold" style="color: var(--text-heading);">主題建議</h3>
+          <div class="grid grid-cols-2 gap-3">
+            {{ $topics := slice "Elixir 基礎教學" "Phoenix/LiveView" "OTP 與 GenServer" "Ecto 資料庫" "測試與 CI/CD" "效能調校" "部署經驗" "開源專案介紹" }}
+            {{ range $topics }}
+            <div class="flex items-center gap-2 text-sm" style="color: var(--text-secondary);">
+              <svg class="w-4 h-4 text-elixir-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+              </svg>
+              {{ . }}
+            </div>
+            {{ end }}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Past Events Section -->
+<section class="section" style="background-color: var(--section-alt-bg);">
+  <div class="container-custom">
+    <div class="text-center mb-12">
+      <h2 class="text-gradient mb-4">過往活動紀錄</h2>
+      <p class="text-lg" style="color: var(--text-tertiary);">查看我們的 YouTube 頻道觀看活動錄影</p>
+    </div>
+
+    <div class="flex justify-center">
+      <a href="{{ .Site.Params.social.youtube }}" target="_blank" rel="noopener" class="btn btn-primary text-lg px-8 py-4">
+        <svg class="w-6 h-6 mr-2" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+        </svg>
+        觀看 YouTube 頻道
+      </a>
+    </div>
+  </div>
+</section>
+{{ end }}

@@ -1,10 +1,5 @@
----
-title: "關於我們"
-readTime: false
-tags: []
-breadcrumb: true
-showTags: false
-hideBackToTop: false
-hidePagination: true
-disableComment: true
----
++++
+title = '關於 Elixir Taiwan'
+description = '認識台灣最活躍的 Elixir 程式語言社群'
+layout = 'about'
++++

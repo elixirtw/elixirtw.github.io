@@ -1,0 +1,314 @@
+@import "tailwindcss";
+
+/* Custom theme configuration for Tailwind v4 */
+@theme {
+  /* Elixir brand colors */
+  --color-elixir-50: #f5f3ff;
+  --color-elixir-100: #ede9fe;
+  --color-elixir-200: #ddd6fe;
+  --color-elixir-300: #c4b5fd;
+  --color-elixir-400: #a78bfa;
+  --color-elixir-500: #8b5cf6;
+  --color-elixir-600: #7c3aed;
+  --color-elixir-700: #6d28d9;
+  --color-elixir-800: #5b21b6;
+  --color-elixir-900: #4c1d95;
+  --color-elixir-950: #2e1065;
+
+  /* Dark theme colors */
+  --color-dark-50: #f8fafc;
+  --color-dark-100: #f1f5f9;
+  --color-dark-200: #e2e8f0;
+  --color-dark-300: #cbd5e1;
+  --color-dark-400: #94a3b8;
+  --color-dark-500: #64748b;
+  --color-dark-600: #475569;
+  --color-dark-700: #334155;
+  --color-dark-800: #1e293b;
+  --color-dark-900: #0f172a;
+  --color-dark-950: #020617;
+
+  /* Custom fonts */
+  --font-sans: 'Inter', 'Noto Sans TC', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+
+  /* Custom shadows */
+  --shadow-glow: 0 0 20px rgba(139, 92, 246, 0.3);
+  --shadow-glow-lg: 0 0 40px rgba(139, 92, 246, 0.4);
+  --shadow-glow-xl: 0 0 60px rgba(139, 92, 246, 0.5);
+
+  /* Custom animations */
+  --animate-pulse-slow: pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  --animate-float: float 6s ease-in-out infinite;
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+  }
+}
+
+/* ===== Light/Dark Theme System ===== */
+:root {
+  /* Light theme (default) */
+  --bg-primary: #ffffff;
+  --bg-secondary: #f8fafc;
+  --bg-tertiary: #f1f5f9;
+  --bg-card: #ffffff;
+  --bg-card-hover: #f8fafc;
+  --bg-code: #f1f5f9;
+  --code-text: #5b21b6;
+  --code-comment: #64748b;
+  --bg-hero: #ffffff;
+  --border-primary: #e2e8f0;
+  --border-secondary: #cbd5e1;
+  --text-primary: #1e293b;
+  --text-secondary: #475569;
+  --text-tertiary: #64748b;
+  --text-muted: #94a3b8;
+  --text-heading: #0f172a;
+  --shadow-card: 0 1px 3px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.06);
+  --shadow-card-hover: 0 10px 15px rgba(0, 0, 0, 0.1), 0 4px 6px rgba(0, 0, 0, 0.05);
+  --grid-color: rgba(139, 92, 246, 0.06);
+  --dot-color: rgba(139, 92, 246, 0.1);
+  --section-alt-bg: #f8fafc;
+}
+
+.dark {
+  /* Dark theme */
+  --bg-primary: #020617;
+  --bg-secondary: #0f172a;
+  --bg-tertiary: #1e293b;
+  --bg-card: rgba(15, 23, 42, 0.5);
+  --bg-card-hover: rgba(30, 41, 59, 0.5);
+  --bg-code: #0f172a;
+  --code-text: #c4b5fd;
+  --code-comment: #64748b;
+  --bg-hero: #020617;
+  --border-primary: #334155;
+  --border-secondary: #475569;
+  --text-primary: #f8fafc;
+  --text-secondary: #cbd5e1;
+  --text-tertiary: #94a3b8;
+  --text-muted: #64748b;
+  --text-heading: #ffffff;
+  --shadow-card: 0 0 20px rgba(139, 92, 246, 0.1);
+  --shadow-card-hover: 0 0 20px rgba(139, 92, 246, 0.3);
+  --grid-color: rgba(139, 92, 246, 0.1);
+  --dot-color: rgba(139, 92, 246, 0.3);
+  --section-alt-bg: rgba(15, 23, 42, 0.5);
+}
+
+/* Tailwind v4 source configuration */
+@source "../../../layouts/**/*.html";
+@source "../../../../content/**/*.md";
+
+/* Custom base styles */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    @apply antialiased font-sans;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+
+  /* Typography */
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-bold tracking-tight;
+  }
+
+  h1 {
+    @apply text-4xl md:text-5xl lg:text-6xl;
+  }
+
+  h2 {
+    @apply text-3xl md:text-4xl;
+  }
+
+  h3 {
+    @apply text-2xl md:text-3xl;
+  }
+
+  h4 {
+    @apply text-xl md:text-2xl;
+  }
+
+  /* Links */
+  a {
+    @apply transition-colors duration-200;
+  }
+
+  /* Code blocks */
+  pre {
+    background-color: var(--bg-code);
+    border-color: var(--border-primary);
+    @apply rounded-xl p-4 overflow-x-auto border;
+  }
+
+  code {
+    @apply font-mono text-sm;
+  }
+
+  :not(pre) > code {
+    background-color: var(--bg-tertiary);
+    @apply px-1.5 py-0.5 rounded text-elixir-600 dark:text-elixir-400;
+  }
+}
+
+/* Custom components */
+@layer components {
+  /* Button styles */
+  .btn {
+    @apply inline-flex items-center justify-center px-6 py-3 rounded-lg font-medium transition-all duration-200;
+  }
+
+  .btn-primary {
+    @apply bg-elixir-600 hover:bg-elixir-500 text-white shadow-glow hover:shadow-glow-lg;
+  }
+
+  .btn-secondary {
+    background-color: var(--bg-tertiary);
+    border-color: var(--border-primary);
+    color: var(--text-primary);
+    @apply border hover:border-elixir-500;
+  }
+  .btn-secondary:hover {
+    background-color: var(--bg-card-hover);
+  }
+
+  .btn-outline {
+    @apply border-2 border-elixir-500 text-elixir-400 hover:bg-elixir-500 hover:text-white;
+  }
+
+  /* Card styles */
+  .card {
+    background-color: var(--bg-card);
+    border-color: var(--border-primary);
+    box-shadow: var(--shadow-card);
+    @apply backdrop-blur-sm rounded-2xl border p-6 transition-all duration-300;
+  }
+
+  .card-hover:hover {
+    border-color: rgba(139, 92, 246, 0.5);
+    box-shadow: var(--shadow-card-hover);
+    @apply -translate-y-1;
+  }
+
+  /* Gradient text */
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-linear-to-r from-elixir-400 via-elixir-500 to-elixir-600;
+  }
+
+  /* Section styles */
+  .section {
+    @apply py-16 md:py-24;
+  }
+
+  .container-custom {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  /* Navigation */
+  .nav-link {
+    color: var(--text-secondary);
+    @apply hover:text-elixir-600 dark:hover:text-elixir-400 transition-colors duration-200 font-medium;
+  }
+
+  .nav-link-active {
+    @apply text-elixir-600 dark:text-elixir-400;
+  }
+
+  /* Feature icon */
+  .feature-icon {
+    @apply w-12 h-12 rounded-xl bg-elixir-600/20 flex items-center justify-center text-elixir-400;
+  }
+
+  /* Tag/Badge */
+  .tag {
+    @apply inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-elixir-600/20 text-elixir-400 border border-elixir-500/30;
+  }
+
+  /* Line clamp utilities */
+  .line-clamp-2 {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .line-clamp-3 {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+}
+
+/* Custom utilities */
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  /* Grid pattern background */
+  .bg-grid {
+    background-image:
+      linear-gradient(to right, var(--grid-color) 1px, transparent 1px),
+      linear-gradient(to bottom, var(--grid-color) 1px, transparent 1px);
+    background-size: 60px 60px;
+  }
+
+  /* Dot pattern background */
+  .bg-dots {
+    background-image: radial-gradient(var(--dot-color) 1px, transparent 1px);
+    background-size: 20px 20px;
+  }
+}
+
+/* Syntax highlighting overrides for Elixir theme */
+.highlight {
+  @apply bg-dark-900 rounded-xl overflow-hidden;
+}
+
+.highlight pre {
+  @apply m-0 p-4;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: var(--bg-secondary);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--border-secondary);
+  @apply rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--text-muted);
+}
+
+/* Selection */
+::selection {
+  @apply bg-elixir-600/50 text-white;
+}
+
+/* Prose customizations for article content */
+.prose {
+  --tw-prose-body: theme(colors.gray.300);
+  --tw-prose-headings: theme(colors.white);
+  --tw-prose-links: theme(colors.elixir.400);
+  --tw-prose-bold: theme(colors.white);
+  --tw-prose-code: theme(colors.elixir.400);
+  --tw-prose-quotes: theme(colors.gray.300);
+  --tw-prose-quote-borders: theme(colors.elixir.500);
+}
+

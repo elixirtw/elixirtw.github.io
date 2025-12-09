@@ -1,1 +1,26 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Tags on Elixir Taiwan Blog</title><link>https://elixir.tw/tags/</link><description>Recent content in Tags on Elixir Taiwan Blog</description><generator>Hugo</generator><language>en-US</language><lastBuildDate>Sun, 05 Jan 2025 06:53:32 +0800</lastBuildDate><atom:link href="https://elixir.tw/tags/index.xml" rel="self" type="application/rss+xml"/><item><title>Elixir</title><link>https://elixir.tw/tags/elixir/</link><pubDate>Sun, 05 Jan 2025 06:53:32 +0800</pubDate><guid>https://elixir.tw/tags/elixir/</guid><description/></item><item><title>Functional Programming</title><link>https://elixir.tw/tags/functional-programming/</link><pubDate>Sun, 05 Jan 2025 06:53:32 +0800</pubDate><guid>https://elixir.tw/tags/functional-programming/</guid><description/></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on Elixir Taiwan</title>
+    <link>http://localhost:60390/tags/</link>
+    <description>Recent content in Tags on Elixir Taiwan</description>
+    <generator>Hugo</generator>
+    <language>en-US</language>
+    <lastBuildDate>Sun, 05 Jan 2025 06:53:32 +0800</lastBuildDate>
+    <atom:link href="http://localhost:60390/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Elixir</title>
+      <link>http://localhost:60390/tags/elixir/</link>
+      <pubDate>Sun, 05 Jan 2025 06:53:32 +0800</pubDate>
+      <guid>http://localhost:60390/tags/elixir/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Functional Programming</title>
+      <link>http://localhost:60390/tags/functional-programming/</link>
+      <pubDate>Sun, 05 Jan 2025 06:53:32 +0800</pubDate>
+      <guid>http://localhost:60390/tags/functional-programming/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>
