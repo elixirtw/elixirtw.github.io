@@ -9,7 +9,7 @@
       <span class="tag mb-4">技術優勢</span>
       <h1 class="text-gradient mb-6">為什麼選擇 Elixir?</h1>
       <p class="text-xl leading-relaxed" style="color: var(--text-secondary);">
-        從 Discord 到 WhatsApp，全球頂尖企業選擇 Elixir 來處理最具挑戰性的技術難題。了解 Elixir 如何幫助你打造高效能、高可靠的系統。
+        從 Discord 到 WhatsApp，全球頂尖企業選擇 Elixir 來處理最具挑戰性的技術難題。<br/>了解 Elixir 如何幫助你打造高效能、高可靠的系統。
       </p>
     </div>
   </div>
@@ -185,7 +185,7 @@
 
     <div class="grid md:grid-cols-2 gap-8">
       <!-- Discord -->
-      <div class="card card-hover">
+      <a href="https://discord.com/blog/how-discord-scaled-elixir-to-5-000-000-concurrent-users" target="_blank" rel="noopener" class="card card-hover group">
         <div class="flex items-center gap-4 mb-4">
           <div class="w-12 h-12 rounded-xl bg-[#5865F2]/20 flex items-center justify-center">
             <svg class="w-7 h-7 text-[#5865F2]" fill="currentColor" viewBox="0 0 24 24">
@@ -193,21 +193,21 @@
             </svg>
           </div>
           <div>
-            <h3 class="text-xl font-semibold" style="color: var(--text-heading);">Discord</h3>
+            <h3 class="text-xl font-semibold group-hover:text-[#5865F2] transition-colors" style="color: var(--text-heading);">Discord</h3>
             <p class="text-sm" style="color: var(--text-tertiary);">即時通訊平台</p>
           </div>
         </div>
         <p class="mb-4" style="color: var(--text-secondary);">
-          Discord 使用 Elixir 處理即時訊息與語音通訊，支援數百萬用戶同時在線，單一頻道可容納超過 100 萬成員。
+          Discord 使用 Elixir 處理即時訊息與語音通訊，以 5 人團隊維護 20+ 個服務，支援 1,100 萬並發用戶。
         </p>
         <div class="flex flex-wrap gap-2">
-          <span class="px-3 py-1 rounded-full text-sm" style="background-color: var(--bg-tertiary); color: var(--text-secondary);">數百萬並發連線</span>
-          <span class="px-3 py-1 rounded-full text-sm" style="background-color: var(--bg-tertiary); color: var(--text-secondary);">毫秒級延遲</span>
+          <span class="px-3 py-1 rounded-full text-sm" style="background-color: var(--bg-tertiary); color: var(--text-secondary);">1,100 萬並發</span>
+          <span class="px-3 py-1 rounded-full text-sm" style="background-color: var(--bg-tertiary); color: var(--text-secondary);">5 人團隊</span>
         </div>
-      </div>
+      </a>
 
       <!-- WhatsApp -->
-      <div class="card card-hover">
+      <a href="https://highscalability.com/the-whatsapp-architecture-facebook-bought-for-19-billion/" target="_blank" rel="noopener" class="card card-hover group">
         <div class="flex items-center gap-4 mb-4">
           <div class="w-12 h-12 rounded-xl bg-[#25D366]/20 flex items-center justify-center">
             <svg class="w-7 h-7 text-[#25D366]" fill="currentColor" viewBox="0 0 24 24">
@@ -215,21 +215,21 @@
             </svg>
           </div>
           <div>
-            <h3 class="text-xl font-semibold" style="color: var(--text-heading);">WhatsApp</h3>
+            <h3 class="text-xl font-semibold group-hover:text-[#25D366] transition-colors" style="color: var(--text-heading);">WhatsApp</h3>
             <p class="text-sm" style="color: var(--text-tertiary);">通訊軟體</p>
           </div>
         </div>
         <p class="mb-4" style="color: var(--text-secondary);">
-          WhatsApp 使用 Erlang（Elixir 的基礎）建構後端，以不到 50 名工程師的團隊服務超過 20 億用戶。
+          WhatsApp 使用 Erlang 建構後端，單機達成 200 萬連線，以精簡團隊服務超過 20 億用戶。
         </p>
         <div class="flex flex-wrap gap-2">
+          <span class="px-3 py-1 rounded-full text-sm" style="background-color: var(--bg-tertiary); color: var(--text-secondary);">單機 200 萬連線</span>
           <span class="px-3 py-1 rounded-full text-sm" style="background-color: var(--bg-tertiary); color: var(--text-secondary);">20 億用戶</span>
-          <span class="px-3 py-1 rounded-full text-sm" style="background-color: var(--bg-tertiary); color: var(--text-secondary);">高度精簡團隊</span>
         </div>
-      </div>
+      </a>
 
       <!-- Pinterest -->
-      <div class="card card-hover">
+      <a href="https://medium.com/pinterest-engineering/introducing-new-open-source-tools-for-the-elixir-community-2f7bb0bb7d8c" target="_blank" rel="noopener" class="card card-hover group">
         <div class="flex items-center gap-4 mb-4">
           <div class="w-12 h-12 rounded-xl bg-[#E60023]/20 flex items-center justify-center">
             <svg class="w-7 h-7 text-[#E60023]" fill="currentColor" viewBox="0 0 24 24">
@@ -237,21 +237,21 @@
             </svg>
           </div>
           <div>
-            <h3 class="text-xl font-semibold" style="color: var(--text-heading);">Pinterest</h3>
+            <h3 class="text-xl font-semibold group-hover:text-[#E60023] transition-colors" style="color: var(--text-heading);">Pinterest</h3>
             <p class="text-sm" style="color: var(--text-tertiary);">圖片社群平台</p>
           </div>
         </div>
         <p class="mb-4" style="color: var(--text-secondary);">
-          Pinterest 使用 Elixir 建構推播通知系統，每秒處理數萬筆推送，確保用戶即時收到更新。
+          Pinterest 使用 Elixir 重建通知系統，伺服器從 30 台減至 15 台，每年省下超過 200 萬美元。
         </p>
         <div class="flex flex-wrap gap-2">
-          <span class="px-3 py-1 rounded-full text-sm" style="background-color: var(--bg-tertiary); color: var(--text-secondary);">每秒數萬推送</span>
-          <span class="px-3 py-1 rounded-full text-sm" style="background-color: var(--bg-tertiary); color: var(--text-secondary);">即時通知</span>
+          <span class="px-3 py-1 rounded-full text-sm" style="background-color: var(--bg-tertiary); color: var(--text-secondary);">伺服器減半</span>
+          <span class="px-3 py-1 rounded-full text-sm" style="background-color: var(--bg-tertiary); color: var(--text-secondary);">年省 $2M</span>
         </div>
-      </div>
+      </a>
 
       <!-- Bleacher Report -->
-      <div class="card card-hover">
+      <a href="https://www.erlang-solutions.com/case-studies/bleacher-report-case-study/" target="_blank" rel="noopener" class="card card-hover group">
         <div class="flex items-center gap-4 mb-4">
           <div class="w-12 h-12 rounded-xl bg-[#FF0000]/20 flex items-center justify-center">
             <svg class="w-7 h-7 text-[#FF0000]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -259,31 +259,32 @@
             </svg>
           </div>
           <div>
-            <h3 class="text-xl font-semibold" style="color: var(--text-heading);">Bleacher Report</h3>
+            <h3 class="text-xl font-semibold group-hover:text-[#FF0000] transition-colors" style="color: var(--text-heading);">Bleacher Report</h3>
             <p class="text-sm" style="color: var(--text-tertiary);">運動媒體平台</p>
           </div>
         </div>
         <p class="mb-4" style="color: var(--text-secondary);">
-          Bleacher Report 使用 Elixir 處理即時運動比分更新，在重大賽事期間應對突發流量高峰。
+          Bleacher Report 從 Ruby 遷移至 Elixir，伺服器從 150 台降至 5 台，每日處理 2 億推播通知。
         </p>
         <div class="flex flex-wrap gap-2">
-          <span class="px-3 py-1 rounded-full text-sm" style="background-color: var(--bg-tertiary); color: var(--text-secondary);">即時比分</span>
-          <span class="px-3 py-1 rounded-full text-sm" style="background-color: var(--bg-tertiary); color: var(--text-secondary);">流量尖峰處理</span>
+          <span class="px-3 py-1 rounded-full text-sm" style="background-color: var(--bg-tertiary); color: var(--text-secondary);">150→5 台伺服器</span>
+          <span class="px-3 py-1 rounded-full text-sm" style="background-color: var(--bg-tertiary); color: var(--text-secondary);">日 2 億推播</span>
         </div>
-      </div>
+      </a>
     </div>
 
     <!-- More Companies -->
     <div class="mt-12 text-center">
       <p class="mb-6" style="color: var(--text-tertiary);">還有更多企業選擇 Elixir：</p>
-      <div class="flex flex-wrap justify-center gap-8" style="color: var(--text-muted);">
-        <span>PepsiCo</span>
-        <span>Spotify</span>
-        <span>Square</span>
-        <span>Moz</span>
-        <span>FarmBot</span>
-        <span>Heroku</span>
-        <span>Toyota</span>
+      <div class="flex flex-wrap justify-center gap-6 md:gap-8">
+        <a href="https://elixir-lang.org/blog/2021/06/02/social-virtual-spaces-with-elixir-at-mozilla/" target="_blank" rel="noopener" class="hover:text-elixir-400 transition-colors" style="color: var(--text-muted);">Mozilla</a>
+        <a href="https://elixir-lang.org/blog/2021/04/02/marketing-and-sales-intelligence-with-elixir-at-pepsico/" target="_blank" rel="noopener" class="hover:text-elixir-400 transition-colors" style="color: var(--text-muted);">PepsiCo</a>
+        <a href="https://elixir-lang.org/blog/2020/09/24/paas-with-elixir-at-Heroku/" target="_blank" rel="noopener" class="hover:text-elixir-400 transition-colors" style="color: var(--text-muted);">Heroku</a>
+        <a href="https://elixir-lang.org/blog/2020/10/27/delivering-social-change-with-elixir-at-change.org/" target="_blank" rel="noopener" class="hover:text-elixir-400 transition-colors" style="color: var(--text-muted);">Change.org</a>
+        <a href="https://elixir-lang.org/blog/2025/01/21/remote-elixir-case/" target="_blank" rel="noopener" class="hover:text-elixir-400 transition-colors" style="color: var(--text-muted);">Remote</a>
+        <a href="https://elixir-lang.org/blog/2020/12/10/integrating-travel-with-elixir-at-duffel/" target="_blank" rel="noopener" class="hover:text-elixir-400 transition-colors" style="color: var(--text-muted);">Duffel</a>
+        <a href="https://elixir-lang.org/blog/2020/08/20/embedded-elixir-at-farmbot/" target="_blank" rel="noopener" class="hover:text-elixir-400 transition-colors" style="color: var(--text-muted);">FarmBot</a>
+        <a href="https://elixir-companies.com/" target="_blank" rel="noopener" class="hover:text-elixir-400 transition-colors" style="color: var(--text-muted);">...and more</a>
       </div>
     </div>
   </div>
@@ -299,7 +300,7 @@
         <p class="mb-8" style="color: var(--text-secondary);">
           越來越多台灣企業開始採用 Elixir 來建構他們的核心系統。如果你的公司也在使用 Elixir，歡迎聯繫我們分享你的故事！
         </p>
-        <a href="{{ .Site.Params.social.discord }}" target="_blank" rel="noopener" class="btn btn-primary">
+        <a href="mailto:alchemist@elixir.tw" class="btn btn-primary">
           聯繫我們
         </a>
       </div>

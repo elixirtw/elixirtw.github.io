@@ -30,4 +30,4 @@ Dave Thomas 在他的 [Pragmatic Programmer ](https://www.tenlong.com.tw/product
 
 ## Elixir Taiwan 的小聚
 
-提到社群運作， Elixir Taiwan 持續定期舉辦小聚。自 2014 起，已累積了近百場的聚會。讓大家可以聚在一起分享與聊天，也能讓有興趣的新手發問參與。現在就到 [小聚](./meetup) 頁面看看吧！
+提到社群運作， Elixir Taiwan 持續定期舉辦小聚。自 2015 起，已累積了近百場的聚會。讓大家可以聚在一起分享與聊天，也能讓有興趣的新手發問參與。現在就到 [小聚](./meetup) 頁面看看吧！

@@ -26,7 +26,6 @@ listDateFormat = '2006-01-02'
 facebook = "https://www.facebook.com/groups/elixir.tw"
 x = "https://x.com/elixirtw"
 discord = "https://discord.com/invite/9zBmPfrrVP"
-meetup = "https://www.meetup.com/elixirtw-taipei"
 youtube = "https://www.youtube.com/channel/UCzCRwQKbdBbW9-Vpr--ydZg"
 github = "https://github.com/elixirtw"
 
@@ -43,29 +42,30 @@ url = "/about/"
 weight = 2
 
 [[menu.main]]
-name = "什麼是 Elixir"
+name = "關於 Elixir"
 url = "/what-is-elixir/"
 weight = 3
 
 [[menu.main]]
-name = "為什麼 Elixir"
+name = "Why Elixir"
 url = "/why-elixir/"
 weight = 4
 
 [[menu.main]]
-name = "學習資源"
-url = "/resources/"
+name = "Meetup 小聚"
+url = "/meetup/"
 weight = 5
 
 [[menu.main]]
-name = "部落格"
-url = "/posts/"
+name = "學習資源"
+url = "/resources/"
 weight = 6
 
 [[menu.main]]
-name = "小聚活動"
-url = "/meetup/"
+name = "Blog"
+url = "/posts/"
 weight = 7
+
 
 [[menu.main]]
 name = "顧問諮詢"

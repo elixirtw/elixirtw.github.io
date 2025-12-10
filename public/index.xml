@@ -2,66 +2,66 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Elixir Taiwan</title>
-    <link>http://localhost:60390/</link>
+    <link>http://localhost:1313/</link>
     <description>Recent content on Elixir Taiwan</description>
     <generator>Hugo</generator>
     <language>en-US</language>
     <lastBuildDate>Tue, 18 Feb 2025 15:54:31 +0800</lastBuildDate>
-    <atom:link href="http://localhost:60390/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>2025/02/18 Meetup 筆記</title>
-      <link>http://localhost:60390/posts/meetup_note_20250218/</link>
+      <link>http://localhost:1313/posts/meetup_note_20250218/</link>
       <pubDate>Tue, 18 Feb 2025 15:54:31 +0800</pubDate>
-      <guid>http://localhost:60390/posts/meetup_note_20250218/</guid>
+      <guid>http://localhost:1313/posts/meetup_note_20250218/</guid>
       <description>&lt;h1 id=&#34;interesting-find&#34;&gt;Interesting Find&lt;/h1&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://github.com/lalabuy948/PhoenixAnalytics?tab=readme-ov-file&#34;&gt;PhoenixAnalytics&lt;/a&gt;&#xA;Awesome looking analytics tool for your pet project.&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Success Typing vs Set Theoretic Types&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://hexdocs.pm/elixir/changelog.html#type-system-improvements&#34;&gt;Elixir 1.18 changelog&lt;/a&gt; around types.&lt;/p&gt;&#xA;&lt;details&gt;&#xA;  &lt;summary&gt;From ChatGPT &lt;/summary&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://chatgpt.com/share/67b45361-43e8-800c-b46b-06f39bb3f5fa&#34;&gt;&lt;strong&gt;link&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;&#xA;&lt;h3 id=&#34;deep-dive-into-set-theoretic-types-in-elixir&#34;&gt;&lt;strong&gt;Deep Dive into Set-Theoretic Types in Elixir&lt;/strong&gt;&lt;/h3&gt;&#xA;&lt;p&gt;Since we’ve seen how &lt;strong&gt;Elixir&amp;rsquo;s current type system&lt;/strong&gt; (using Dialyzer) allows some incorrect types to slip through, let&amp;rsquo;s now explore &lt;strong&gt;how a set-theoretic type system&lt;/strong&gt; would work differently.&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;1-how-would-set-theoretic-types-work-in-elixir&#34;&gt;&lt;strong&gt;1. How Would Set-Theoretic Types Work in Elixir?&lt;/strong&gt;&lt;/h2&gt;&#xA;&lt;pre&gt;&lt;code&gt;  A **set-theoretic type system** introduces explicit operations like **union (`|`), intersection (`&amp;amp;`), and negation (`~`)**. These allow us to **strictly enforce** type constraints **at compile time** rather than relying on Dialyzer’s success typing.&#xA;&lt;/code&gt;&lt;/pre&gt;&#xA;&lt;h3 id=&#34;-comparison-with-dialyzer&#34;&gt;🔹 &lt;strong&gt;Comparison with Dialyzer&lt;/strong&gt;&lt;/h3&gt;&#xA;&lt;pre&gt;&lt;code&gt;  | Feature               | Dialyzer (Success Typing) | Set-Theoretic Types (Strict Typing) |&#xA;  |----------------------|----------------------|-------------------|&#xA;  | **Union Types (`\|`)**    | Implicit, inferred   | Explicit &amp;amp; enforced |&#xA;  | **Intersection Types (`&amp;amp;`)** | Not supported       | Fully supported |&#xA;  | **Negation Types (`~T`)**    | Not supported       | Supported (`~String`) |&#xA;  | **Compile-Time Checks**     | No (only warnings)   | Yes (strict enforcement) |&#xA;  | **Error Handling**    | Some false negatives | More precise detection |&#xA;&lt;/code&gt;&lt;/pre&gt;&#xA;&lt;h2 id=&#34;2-example-strict-union-types-in-set-theoretic-typing&#34;&gt;&lt;strong&gt;2. Example: Strict Union Types in Set-Theoretic Typing&lt;/strong&gt;&lt;/h2&gt;&#xA;&lt;pre&gt;&lt;code&gt;  Let’s redefine the previous example **using set-theoretic types**.&#xA;&lt;/code&gt;&lt;/pre&gt;&#xA;&lt;h3 id=&#34;-current-elixir-dialyzer&#34;&gt;&lt;strong&gt;🔸 Current Elixir (Dialyzer)&lt;/strong&gt;&lt;/h3&gt;&#xA;&lt;pre&gt;&lt;code&gt;  ```elixir&#xA;  @spec format_value(integer() | binary()) :: binary()&#xA;  def format_value(value) do&#xA;    to_string(value)&#xA;  end&#xA;  ```&#xA;&#xA;  ❌ **Problem:** Dialyzer won’t stop you from passing an atom like `:world`, even though the spec only allows `integer()` or `binary()`.&#xA;&#xA;  ---&#xA;&lt;/code&gt;&lt;/pre&gt;&#xA;&lt;h3 id=&#34;-how-it-would-work-in-a-set-theoretic-type-system&#34;&gt;&lt;strong&gt;🔹 How It Would Work in a Set-Theoretic Type System&lt;/strong&gt;&lt;/h3&gt;&#xA;&lt;pre&gt;&lt;code&gt;  If Elixir had **explicitly enforced union types**, the function might be written like this:&#xA;&#xA;  ```elixir&#xA;  def format_value(value: Integer | String) -&amp;gt; String do&#xA;    to_string(value)&#xA;  end&#xA;  ```&#xA;&#xA;  ✅ **Key Differences:**&#xA;  - **Explicit union (`Integer | String`)** prevents invalid inputs at **compile-time**.&#xA;  - **If you pass a `List` or an `Atom`, compilation will fail.**  &#xA;  - **No need for Dialyzer!** Type checking is built-in.&#xA;&#xA;  ---&#xA;&lt;/code&gt;&lt;/pre&gt;&#xA;&lt;h2 id=&#34;3-intersection-types-&#34;&gt;&lt;strong&gt;3. Intersection Types (&lt;code&gt;&amp;amp;&lt;/code&gt;)&lt;/strong&gt;&lt;/h2&gt;&#xA;&lt;pre&gt;&lt;code&gt;  Sometimes we want a type that **must satisfy multiple conditions**. Right now, Elixir **doesn&#39;t support this**.&#xA;&lt;/code&gt;&lt;/pre&gt;&#xA;&lt;h3 id=&#34;-current-elixir-no-intersection-types&#34;&gt;&lt;strong&gt;🔸 Current Elixir (No Intersection Types)&lt;/strong&gt;&lt;/h3&gt;&#xA;&lt;pre&gt;&lt;code&gt;  Imagine we have `Drawable` and `Clickable` behaviors:&#xA;&#xA;  ```elixir&#xA;  defmodule Drawable do&#xA;    @callback draw() :: :ok&#xA;  end&#xA;&#xA;  defmodule Clickable do&#xA;    @callback click() :: :ok&#xA;  end&#xA;  ```&#xA;&#xA;  If we want to define a function that only accepts objects that **both** implement `Drawable` and `Clickable`, there&#39;s no **native** way to enforce this.&#xA;&lt;/code&gt;&lt;/pre&gt;&#xA;&lt;h3 id=&#34;-with-set-theoretic-types-&#34;&gt;&lt;strong&gt;🔹 With Set-Theoretic Types (&lt;code&gt;&amp;amp;&lt;/code&gt;)&lt;/strong&gt;&lt;/h3&gt;&#xA;&lt;pre&gt;&lt;code&gt;  ```elixir&#xA;  def handle_element(element: Drawable &amp;amp; Clickable) -&amp;gt; :ok do&#xA;    element.draw()&#xA;    element.click()&#xA;  end&#xA;  ```&#xA;&#xA;  ✅ **Key Differences:**&#xA;  - `Drawable &amp;amp; Clickable` means **the argument must satisfy both interfaces.**&#xA;  - If an object **implements only `Drawable` but not `Clickable`, it’s rejected**.&#xA;  - **Stronger compile-time safety** without runtime checks.&#xA;&#xA;  ---&#xA;&lt;/code&gt;&lt;/pre&gt;&#xA;&lt;h2 id=&#34;4-negation-types-&#34;&gt;&lt;strong&gt;4. Negation Types (&lt;code&gt;~T&lt;/code&gt;)&lt;/strong&gt;&lt;/h2&gt;&#xA;&lt;pre&gt;&lt;code&gt;  Another powerful feature of set-theoretic types is **negation**: `~T` means “any type **except** `T`.”&#xA;&lt;/code&gt;&lt;/pre&gt;&#xA;&lt;h3 id=&#34;-current-elixir-no-negation-types&#34;&gt;&lt;strong&gt;🔸 Current Elixir (No Negation Types)&lt;/strong&gt;&lt;/h3&gt;&#xA;&lt;pre&gt;&lt;code&gt;  Imagine we have a function that **should accept any type except a string**:&#xA;&#xA;  ```elixir&#xA;  def process_value(value) do&#xA;    case value do&#xA;      s when is_binary(s) -&amp;gt; raise &amp;quot;Strings not allowed!&amp;quot;&#xA;      _ -&amp;gt; IO.inspect(value)&#xA;    end&#xA;  end&#xA;  ```&#xA;&#xA;  ❌ **Problem:** We have to write explicit guards (`is_binary/1`).  &#xA;  ❌ **If we forget the guard, there&#39;s no type-level protection.**&#xA;&lt;/code&gt;&lt;/pre&gt;&#xA;&lt;h3 id=&#34;-with-set-theoretic-types--1&#34;&gt;&lt;strong&gt;🔹 With Set-Theoretic Types (&lt;code&gt;~T&lt;/code&gt;)&lt;/strong&gt;&lt;/h3&gt;&#xA;&lt;pre&gt;&lt;code&gt;  ```elixir&#xA;  def process_value(value: ~String) -&amp;gt; any do&#xA;    IO.inspect(value)&#xA;  end&#xA;  ```&#xA;&#xA;  ✅ **Key Differences:**&#xA;  - `~String` ensures **compile-time rejection of strings**.&#xA;  - No need for **manual guards**.&#xA;  - Stronger **error prevention** at the type level.&#xA;&#xA;  ---&#xA;&lt;/code&gt;&lt;/pre&gt;&#xA;&lt;h2 id=&#34;5-practical-implications-how-could-elixir-adopt-this&#34;&gt;&lt;strong&gt;5. Practical Implications: How Could Elixir Adopt This?&lt;/strong&gt;&lt;/h2&gt;&#xA;&lt;pre&gt;&lt;code&gt;  For Elixir to move towards **set-theoretic types**, it would require:&#xA;  1. **Replacing or Enhancing Dialyzer** – Since Dialyzer is based on success typing, a **new type checker** would be needed.&#xA;  2. **Compiler Support for Explicit Types** – Instead of type specs as comments (`@spec`), **types would be enforced at compile-time**.&#xA;  3. **Backwards Compatibility Strategy** – Since Elixir doesn’t require types today, introducing stricter types must be **gradual**.&#xA;&#xA;  ---&#xA;&lt;/code&gt;&lt;/pre&gt;&#xA;&lt;h2 id=&#34;6-would-this-be-worth-it&#34;&gt;&lt;strong&gt;6. Would This Be Worth It?&lt;/strong&gt;&lt;/h2&gt;&#xA;&lt;pre&gt;&lt;code&gt;  ✅ **Pros:**&#xA;  - **Better Type Safety** – More precise types prevent subtle runtime errors.&#xA;  - **No More False Negatives** – Unlike Dialyzer, which sometimes **misses errors**, strict typing **catches them at compile time**.&#xA;  - **More Expressive Code** – Explicit union, intersection, and negation types make type contracts **clearer**.&#xA;&#xA;  ❌ **Cons:**&#xA;  - **More Rigid** – Developers who like Elixir’s **dynamic nature** might dislike stricter typing.&#xA;  - **Potentially More Boilerplate** – If types **must** be declared everywhere, it could slow down development.&#xA;&#xA;  🚀 **José Valim’s research into set-theoretic types suggests that Elixir might move in this direction!** But it would need to balance type safety with Elixir’s dynamic flexibility.&#xA;&lt;/code&gt;&lt;/pre&gt;&#xA;&lt;/details&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Chris McCord is working on AI code generation&lt;/p&gt;</description>
     </item>
     <item>
       <title>為什麼要學函數式語言</title>
-      <link>http://localhost:60390/posts/why_functional/</link>
+      <link>http://localhost:1313/posts/why_functional/</link>
       <pubDate>Sun, 05 Jan 2025 06:53:32 +0800</pubDate>
-      <guid>http://localhost:60390/posts/why_functional/</guid>
+      <guid>http://localhost:1313/posts/why_functional/</guid>
       <description>GenAI 興起的現在，為什麼還要學新語言？</description>
     </item>
     <item>
       <title>什麼是 Elixir</title>
-      <link>http://localhost:60390/what-is-elixir/</link>
+      <link>http://localhost:1313/what-is-elixir/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:60390/what-is-elixir/</guid>
+      <guid>http://localhost:1313/what-is-elixir/</guid>
       <description></description>
     </item>
     <item>
       <title>學習資源</title>
-      <link>http://localhost:60390/resources/</link>
+      <link>http://localhost:1313/resources/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:60390/resources/</guid>
+      <guid>http://localhost:1313/resources/</guid>
       <description></description>
     </item>
     <item>
       <title>小聚活動</title>
-      <link>http://localhost:60390/meetup/</link>
+      <link>http://localhost:1313/meetup/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:60390/meetup/</guid>
+      <guid>http://localhost:1313/meetup/</guid>
       <description></description>
     </item>
     <item>
       <title>為什麼選擇 Elixir</title>
-      <link>http://localhost:60390/why-elixir/</link>
+      <link>http://localhost:1313/why-elixir/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:60390/why-elixir/</guid>
+      <guid>http://localhost:1313/why-elixir/</guid>
       <description></description>
     </item>
     <item>
       <title>關於 Elixir Taiwan</title>
-      <link>http://localhost:60390/about/</link>
+      <link>http://localhost:1313/about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:60390/about/</guid>
+      <guid>http://localhost:1313/about/</guid>
       <description></description>
     </item>
     <item>
       <title>顧問諮詢服務</title>
-      <link>http://localhost:60390/consulting/</link>
+      <link>http://localhost:1313/consulting/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:60390/consulting/</guid>
+      <guid>http://localhost:1313/consulting/</guid>
       <description></description>
     </item>
   </channel>

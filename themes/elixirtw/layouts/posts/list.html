@@ -30,10 +30,10 @@
               {{ end }}{{ end }}
             </div>
             <h2 class="text-xl md:text-2xl font-semibold group-hover:text-elixir-400 transition-colors mb-3" style="color: var(--text-heading);">
-              <a href="{{ .Permalink }}">{{ .Title }}</a>
+              <a href="{{ .RelPermalink }}">{{ .Title }}</a>
             </h2>
             <p class="mb-4 line-clamp-2" style="color: var(--text-secondary);">
-              {{ with .Params.summary }}{{ . }}{{ else }}{{ .Summary }}{{ end }}
+              {{ with .Params.summary }}{{ . }}{{ else }}{{ .Summary | plainify | truncate 150 }}{{ end }}
             </p>
             <div class="flex flex-wrap items-center gap-4 text-sm" style="color: var(--text-tertiary);">
               <time datetime="{{ .Date.Format "2006-01-02" }}">

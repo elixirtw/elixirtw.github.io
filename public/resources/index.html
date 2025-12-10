@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=60390&amp;path=livereload" data-no-instant defer></script>
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
   
   <script>
     (function() {
@@ -33,8 +33,8 @@
   <meta property="og:title" content="學習資源">
   <meta property="og:description" content="Elixir 學習資源整理：官方文件、書籍、課程與工具">
   <meta property="og:type" content="article">
-  <meta property="og:url" content="http://localhost:60390/resources/">
-  <meta property="og:image" content="http://localhost:60390/images/og-image.png">
+  <meta property="og:url" content="http://localhost:1313/resources/">
+  <meta property="og:image" content="http://localhost:1313/images/og-image.png">
   <meta property="og:locale" content="zh_TW">
 
   
@@ -69,12 +69,17 @@
         
           <a href="/what-is-elixir/"
              class="nav-link ">
-            什麼是 Elixir
+            關於 Elixir
           </a>
         
           <a href="/why-elixir/"
              class="nav-link ">
-            為什麼 Elixir
+            Why Elixir
+          </a>
+        
+          <a href="/meetup/"
+             class="nav-link ">
+            Meetup 小聚
           </a>
         
           <a href="/resources/"
@@ -84,12 +89,7 @@
         
           <a href="/posts/"
              class="nav-link ">
-            部落格
-          </a>
-        
-          <a href="/meetup/"
-             class="nav-link ">
-            小聚活動
+            Blog
           </a>
         
           <a href="/consulting/"
@@ -174,13 +174,19 @@
           <a href="/what-is-elixir/"
              class="px-4 py-2 rounded-lg hover:bg-elixir-600/10"
              style="color: var(--text-secondary);">
-            什麼是 Elixir
+            關於 Elixir
           </a>
         
           <a href="/why-elixir/"
              class="px-4 py-2 rounded-lg hover:bg-elixir-600/10"
              style="color: var(--text-secondary);">
-            為什麼 Elixir
+            Why Elixir
+          </a>
+        
+          <a href="/meetup/"
+             class="px-4 py-2 rounded-lg hover:bg-elixir-600/10"
+             style="color: var(--text-secondary);">
+            Meetup 小聚
           </a>
         
           <a href="/resources/"
@@ -192,13 +198,7 @@
           <a href="/posts/"
              class="px-4 py-2 rounded-lg hover:bg-elixir-600/10"
              style="color: var(--text-secondary);">
-            部落格
-          </a>
-        
-          <a href="/meetup/"
-             class="px-4 py-2 rounded-lg hover:bg-elixir-600/10"
-             style="color: var(--text-secondary);">
-            小聚活動
+            Blog
           </a>
         
           <a href="/consulting/"
@@ -315,48 +315,37 @@
   <div class="container-custom">
     <div class="mb-12">
       <h2 class="text-gradient mb-4">官方資源</h2>
-      <p class="text-lg" style="color: var(--text-tertiary);">最權威的學習起點</p>
     </div>
 
-    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
       <a href="https://elixir-lang.org" target="_blank" rel="noopener" class="card card-hover group">
         <div class="w-12 h-12 rounded-xl bg-elixir-600/20 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
           <svg class="w-6 h-6 text-elixir-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
           </svg>
         </div>
-        <h3 class="text-lg font-semibold mb-2 group-hover:text-elixir-400 transition-colors" style="color: var(--text-heading);">Elixir 官網</h3>
-        <p class="text-sm" style="color: var(--text-tertiary);">語言介紹、安裝指南與入門教學</p>
+        <h3 class="text-lg font-semibold mb-2 group-hover:text-elixir-400 transition-colors" style="color: var(--text-heading);">Elixir.org</h3>
+        <p class="text-sm" style="color: var(--text-tertiary);">Elixir 官方網站，語言介紹與安裝指南</p>
       </a>
 
-      <a href="https://elixir-lang.org/docs.html" target="_blank" rel="noopener" class="card card-hover group">
+      <a href="https://hexdocs.pm/elixir/" target="_blank" rel="noopener" class="card card-hover group">
         <div class="w-12 h-12 rounded-xl bg-blue-600/20 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
           <svg class="w-6 h-6 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
           </svg>
         </div>
-        <h3 class="text-lg font-semibold mb-2 group-hover:text-blue-400 transition-colors" style="color: var(--text-heading);">官方文件</h3>
-        <p class="text-sm" style="color: var(--text-tertiary);">完整的語言參考與 API 文件</p>
+        <h3 class="text-lg font-semibold mb-2 group-hover:text-blue-400 transition-colors" style="color: var(--text-heading);">Elixir 官方文件</h3>
+        <p class="text-sm" style="color: var(--text-tertiary);">完整的語言參考與標準函式庫 API</p>
       </a>
 
-      <a href="https://elixirschool.com/zh-hant/" target="_blank" rel="noopener" class="card card-hover group">
-        <div class="w-12 h-12 rounded-xl bg-green-600/20 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-          <svg class="w-6 h-6 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/>
+      <a href="https://www.erlang.org/" target="_blank" rel="noopener" class="card card-hover group">
+        <div class="w-12 h-12 rounded-xl bg-red-600/20 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+          <svg class="w-6 h-6 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"/>
           </svg>
         </div>
-        <h3 class="text-lg font-semibold mb-2 group-hover:text-green-400 transition-colors" style="color: var(--text-heading);">Elixir School</h3>
-        <p class="text-sm" style="color: var(--text-tertiary);">免費中文教學，適合初學者</p>
-      </a>
-
-      <a href="https://phoenixframework.org" target="_blank" rel="noopener" class="card card-hover group">
-        <div class="w-12 h-12 rounded-xl bg-orange-600/20 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-          <svg class="w-6 h-6 text-orange-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 18.657A8 8 0 016.343 7.343S7 9 9 10c0-2 .5-5 2.986-7C14 5 16.09 5.777 17.656 7.343A7.975 7.975 0 0120 13a7.975 7.975 0 01-2.343 5.657z"/>
-          </svg>
-        </div>
-        <h3 class="text-lg font-semibold mb-2 group-hover:text-orange-400 transition-colors" style="color: var(--text-heading);">Phoenix Framework</h3>
-        <p class="text-sm" style="color: var(--text-tertiary);">Web 開發框架官方文件</p>
+        <h3 class="text-lg font-semibold mb-2 group-hover:text-red-400 transition-colors" style="color: var(--text-heading);">Erlang.org</h3>
+        <p class="text-sm" style="color: var(--text-tertiary);">Erlang 官方網站，Elixir 的底層 BEAM 虛擬機</p>
       </a>
     </div>
   </div>
@@ -371,50 +360,44 @@
     </div>
 
     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-      <div class="card card-hover">
+      <a href="https://pragprog.com/titles/elixir16/programming-elixir-1-6/" target="_blank" rel="noopener" class="card card-hover group">
         <div class="flex items-start gap-4">
-          <div class="w-16 h-20 rounded bg-gradient-to-br from-elixir-600 to-elixir-800 flex items-center justify-center shrink-0">
-            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
-            </svg>
+          <div class="w-20 h-26 rounded overflow-hidden shrink-0 group-hover:scale-105 transition-transform">
+            <img src="/images/programming-elixir-1-6.jpg" alt="Programming Elixir 1.6" class="w-full h-full object-cover">
           </div>
           <div>
-            <h3 class="text-lg font-semibold mb-1" style="color: var(--text-heading);">Programming Elixir</h3>
+            <h3 class="text-lg font-semibold mb-1 group-hover:text-elixir-400 transition-colors" style="color: var(--text-heading);">Programming Elixir 1.6</h3>
             <p class="text-sm mb-2" style="color: var(--text-tertiary);">Dave Thomas</p>
-            <p class="text-sm" style="color: var(--text-secondary);">Elixir 入門經典，由 Pragmatic Programmers 出版</p>
+            <p class="text-sm" style="color: var(--text-secondary);">為有經驗的程序員介紹 Elixir，涵蓋函數式編程與並發概念</p>
           </div>
         </div>
-      </div>
+      </a>
 
-      <div class="card card-hover">
+      <a href="https://www.manning.com/books/elixir-in-action-third-edition" target="_blank" rel="noopener" class="card card-hover group">
         <div class="flex items-start gap-4">
-          <div class="w-16 h-20 rounded bg-gradient-to-br from-blue-600 to-blue-800 flex items-center justify-center shrink-0">
-            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
-            </svg>
+          <div class="w-20 h-26 rounded overflow-hidden shrink-0 group-hover:scale-105 transition-transform">
+            <img src="/images/elixir-in-action.jpg" alt="Elixir in Action" class="w-full h-full object-cover">
           </div>
           <div>
-            <h3 class="text-lg font-semibold mb-1" style="color: var(--text-heading);">Elixir in Action</h3>
+            <h3 class="text-lg font-semibold mb-1 group-hover:text-elixir-400 transition-colors" style="color: var(--text-heading);">Elixir in Action</h3>
             <p class="text-sm mb-2" style="color: var(--text-tertiary);">Saša Jurić</p>
-            <p class="text-sm" style="color: var(--text-secondary);">深入理解 Elixir 與 OTP 的進階書籍</p>
+            <p class="text-sm" style="color: var(--text-secondary);">深入學習 Elixir 與 OTP，涵蓋並發編程與分佈式系統</p>
           </div>
         </div>
-      </div>
+      </a>
 
-      <div class="card card-hover">
+      <a href="https://pragprog.com/titles/jgotp/designing-elixir-systems-with-otp/" target="_blank" rel="noopener" class="card card-hover group">
         <div class="flex items-start gap-4">
-          <div class="w-16 h-20 rounded bg-gradient-to-br from-orange-600 to-orange-800 flex items-center justify-center shrink-0">
-            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
-            </svg>
+          <div class="w-20 h-26 rounded overflow-hidden shrink-0 group-hover:scale-105 transition-transform">
+            <img src="/images/designing-elixir-systems.jpg" alt="Designing Elixir Systems with OTP" class="w-full h-full object-cover">
           </div>
           <div>
-            <h3 class="text-lg font-semibold mb-1" style="color: var(--text-heading);">Programming Phoenix LiveView</h3>
-            <p class="text-sm mb-2" style="color: var(--text-tertiary);">Bruce Tate & Sophie DeBenedetto</p>
-            <p class="text-sm" style="color: var(--text-secondary);">學習 LiveView 即時互動應用開發</p>
+            <h3 class="text-lg font-semibold mb-1 group-hover:text-elixir-400 transition-colors" style="color: var(--text-heading);">Designing Elixir Systems with OTP</h3>
+            <p class="text-sm mb-2" style="color: var(--text-tertiary);">James Edward Gray II、Bruce A. Tate</p>
+            <p class="text-sm" style="color: var(--text-secondary);">深入講解 OTP 設計原則，打造快速、彈性的系統</p>
           </div>
         </div>
-      </div>
+      </a>
     </div>
   </div>
 </section>
@@ -427,38 +410,77 @@
       <p class="text-lg" style="color: var(--text-tertiary);">影音學習資源</p>
     </div>
 
+    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+      <a href="https://elixirschool.com/zh-hant/" target="_blank" rel="noopener" class="card card-hover group overflow-hidden">
+        <div class="w-full h-28 rounded-xl overflow-hidden mb-4 group-hover:scale-105 transition-transform flex items-center justify-center" style="background-color: var(--bg-tertiary);">
+          <img src="/images/elixir-school.jpg" alt="Elixir School" class="max-w-full max-h-full object-contain">
+        </div>
+        <h3 class="text-lg font-semibold mb-2 group-hover:text-elixir-400 transition-colors" style="color: var(--text-heading);">Elixir School</h3>
+        <p class="text-sm mb-2" style="color: var(--text-tertiary);">開源社群驅動的免費教學平台，涵蓋各種難度主題</p>
+        <span class="text-xs px-2 py-1 rounded-full bg-green-600/20 text-green-400">免費 · 中文</span>
+      </a>
+
+      <a href="https://pragmaticstudio.com/elixir" target="_blank" rel="noopener" class="card card-hover group overflow-hidden">
+        <div class="w-full h-28 rounded-xl overflow-hidden mb-4 group-hover:scale-105 transition-transform flex items-center justify-center" style="background-color: var(--bg-tertiary);">
+          <img src="/images/pragmaticstudio-elixir.png" alt="Pragmatic Studio" class="max-w-full max-h-full object-contain">
+        </div>
+        <h3 class="text-lg font-semibold mb-2 group-hover:text-blue-400 transition-colors" style="color: var(--text-heading);">Pragmatic Studio</h3>
+        <p class="text-sm mb-2" style="color: var(--text-tertiary);">6 小時影片課程，從零開始構建並發、容錯應用</p>
+        <span class="text-xs px-2 py-1 rounded-full bg-blue-600/20 text-blue-400">付費 · 英文</span>
+      </a>
+
+      <a href="https://elixirstreams.com" target="_blank" rel="noopener" class="card card-hover group overflow-hidden">
+        <div class="w-full h-28 rounded-xl overflow-hidden mb-4 group-hover:scale-105 transition-transform flex items-center justify-center" style="background-color: var(--bg-tertiary);">
+          <img src="/images/elixir-streams-logo.png" alt="ElixirStreams" class="max-w-full max-h-full object-contain">
+        </div>
+        <h3 class="text-lg font-semibold mb-2 group-hover:text-purple-400 transition-colors" style="color: var(--text-heading);">ElixirStreams</h3>
+        <p class="text-sm mb-2" style="color: var(--text-tertiary);">3 分鐘以內的免費影片提示，快速掌握新工具</p>
+        <span class="text-xs px-2 py-1 rounded-full bg-green-600/20 text-green-400">免費 · 英文</span>
+      </a>
+
+      <a href="https://elixircasts.io" target="_blank" rel="noopener" class="card card-hover group overflow-hidden">
+        <div class="w-full h-28 rounded-xl overflow-hidden mb-4 group-hover:scale-105 transition-transform flex items-center justify-center" style="background-color: var(--bg-tertiary);">
+          <img src="/images/elixircasts.png" alt="ElixirCasts.io" class="max-w-full max-h-full object-contain">
+        </div>
+        <h3 class="text-lg font-semibold mb-2 group-hover:text-orange-400 transition-colors" style="color: var(--text-heading);">ElixirCasts.io</h3>
+        <p class="text-sm mb-2" style="color: var(--text-tertiary);">簡短影片集合，每集解決特定問題或探索新函式庫</p>
+        <span class="text-xs px-2 py-1 rounded-full bg-green-600/20 text-green-400">免費 · 英文</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+
+<section class="section" style="background-color: var(--bg-primary);">
+  <div class="container-custom">
+    <div class="mb-12">
+      <h2 class="text-gradient mb-4">Podcast</h2>
+      <p class="text-lg" style="color: var(--text-tertiary);">通勤時間也能學 Elixir</p>
+    </div>
+
     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-      <a href="https://pragmaticstudio.com/elixir" target="_blank" rel="noopener" class="card card-hover group">
-        <div class="feature-icon mb-4">
-          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"/>
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
-          </svg>
+      <a href="https://thinkingelixir.com/the-podcast/" target="_blank" rel="noopener" class="card card-hover group overflow-hidden">
+        <div class="w-full h-28 rounded-xl overflow-hidden mb-4 group-hover:scale-105 transition-transform flex items-center justify-center" style="background-color: var(--bg-tertiary);">
+          <img src="/images/thinking-elixir.png" alt="Thinking Elixir" class="max-w-full max-h-full object-contain">
         </div>
-        <h3 class="text-lg font-semibold mb-2 group-hover:text-elixir-400 transition-colors" style="color: var(--text-heading);">Pragmatic Studio</h3>
-        <p class="text-sm" style="color: var(--text-tertiary);">高品質的 Elixir 與 Phoenix 影片課程</p>
+        <h3 class="text-lg font-semibold mb-2 group-hover:text-elixir-400 transition-colors" style="color: var(--text-heading);">Thinking Elixir</h3>
+        <p class="text-sm" style="color: var(--text-tertiary);">社群新聞、函數式程式設計、從 OOP 轉換等主題</p>
       </a>
 
-      <a href="https://www.udemy.com/topic/elixir/" target="_blank" rel="noopener" class="card card-hover group">
-        <div class="feature-icon mb-4">
-          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"/>
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
-          </svg>
+      <a href="https://devchat.tv/elixir-mix" target="_blank" rel="noopener" class="card card-hover group overflow-hidden">
+        <div class="w-full h-28 rounded-xl overflow-hidden mb-4 group-hover:scale-105 transition-transform flex items-center justify-center" style="background-color: var(--bg-tertiary);">
+          <img src="/images/elixir-mix.jpg" alt="Elixir Mix" class="max-w-full max-h-full object-contain">
         </div>
-        <h3 class="text-lg font-semibold mb-2 group-hover:text-elixir-400 transition-colors" style="color: var(--text-heading);">Udemy</h3>
-        <p class="text-sm" style="color: var(--text-tertiary);">多種 Elixir 課程，從入門到進階</p>
+        <h3 class="text-lg font-semibold mb-2 group-hover:text-purple-400 transition-colors" style="color: var(--text-heading);">Elixir Mix</h3>
+        <p class="text-sm" style="color: var(--text-tertiary);">每週聚焦 Elixir 生態系與實際應用開發</p>
       </a>
 
-      <a href="https://www.youtube.com/channel/UCzCRwQKbdBbW9-Vpr--ydZg" target="_blank" rel="noopener" class="card card-hover group">
-        <div class="feature-icon mb-4">
-          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"/>
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
-          </svg>
+      <a href="https://www.beamrad.io/" target="_blank" rel="noopener" class="card card-hover group overflow-hidden">
+        <div class="w-full h-28 rounded-xl overflow-hidden mb-4 group-hover:scale-105 transition-transform flex items-center justify-center" style="background-color: var(--bg-tertiary);">
+          <img src="/images/beam-radio.jpg" alt="BEAM Radio" class="max-w-full max-h-full object-contain">
         </div>
-        <h3 class="text-lg font-semibold mb-2 group-hover:text-elixir-400 transition-colors" style="color: var(--text-heading);">Elixir Taiwan YouTube</h3>
-        <p class="text-sm" style="color: var(--text-tertiary);">社群聚會錄影與技術分享</p>
+        <h3 class="text-lg font-semibold mb-2 group-hover:text-orange-400 transition-colors" style="color: var(--text-heading);">BEAM Radio</h3>
+        <p class="text-sm" style="color: var(--text-tertiary);">Elixir、Erlang 與 BEAM 生態系深度討論</p>
       </a>
     </div>
   </div>
@@ -483,13 +505,13 @@
         <p class="text-sm" style="color: var(--text-tertiary);">官方討論區，問問題的好地方</p>
       </a>
 
-      <a href="https://elixir-slackin.herokuapp.com" target="_blank" rel="noopener" class="card card-hover group text-center">
-        <div class="w-14 h-14 rounded-xl bg-[#4A154B]/20 flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
-          <svg class="w-7 h-7 text-[#E01E5A]" fill="currentColor" viewBox="0 0 24 24">
-            <path d="M5.042 15.165a2.528 2.528 0 0 1-2.52 2.523A2.528 2.528 0 0 1 0 15.165a2.527 2.527 0 0 1 2.522-2.52h2.52v2.52zM6.313 15.165a2.527 2.527 0 0 1 2.521-2.52 2.527 2.527 0 0 1 2.521 2.52v6.313A2.528 2.528 0 0 1 8.834 24a2.528 2.528 0 0 1-2.521-2.522v-6.313zM8.834 5.042a2.528 2.528 0 0 1-2.521-2.52A2.528 2.528 0 0 1 8.834 0a2.528 2.528 0 0 1 2.521 2.522v2.52H8.834zM8.834 6.313a2.528 2.528 0 0 1 2.521 2.521 2.528 2.528 0 0 1-2.521 2.521H2.522A2.528 2.528 0 0 1 0 8.834a2.528 2.528 0 0 1 2.522-2.521h6.312zM18.956 8.834a2.528 2.528 0 0 1 2.522-2.521A2.528 2.528 0 0 1 24 8.834a2.528 2.528 0 0 1-2.522 2.521h-2.522V8.834zM17.688 8.834a2.528 2.528 0 0 1-2.523 2.521 2.527 2.527 0 0 1-2.52-2.521V2.522A2.527 2.527 0 0 1 15.165 0a2.528 2.528 0 0 1 2.523 2.522v6.312zM15.165 18.956a2.528 2.528 0 0 1 2.523 2.522A2.528 2.528 0 0 1 15.165 24a2.527 2.527 0 0 1-2.52-2.522v-2.522h2.52zM15.165 17.688a2.527 2.527 0 0 1-2.52-2.523 2.526 2.526 0 0 1 2.52-2.52h6.313A2.527 2.527 0 0 1 24 15.165a2.528 2.528 0 0 1-2.522 2.523h-6.313z"/>
+      <a href="https://discord.com/invite/elixir" target="_blank" rel="noopener" class="card card-hover group text-center">
+        <div class="w-14 h-14 rounded-xl bg-[#5865F2]/20 flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
+          <svg class="w-7 h-7 text-[#5865F2]" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028 14.09 14.09 0 0 0 1.226-1.994.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03z"/>
           </svg>
         </div>
-        <h3 class="text-lg font-semibold mb-2 group-hover:text-[#E01E5A] transition-colors" style="color: var(--text-heading);">Elixir Slack</h3>
+        <h3 class="text-lg font-semibold mb-2 group-hover:text-[#5865F2] transition-colors" style="color: var(--text-heading);">Elixir Discord</h3>
         <p class="text-sm" style="color: var(--text-tertiary);">全球 Elixir 開發者即時交流</p>
       </a>
 
@@ -520,11 +542,95 @@
 <section class="section" style="background-color: var(--section-alt-bg);">
   <div class="container-custom">
     <div class="mb-12">
-      <h2 class="text-gradient mb-4">開發工具</h2>
-      <p class="text-lg" style="color: var(--text-tertiary);">提升開發效率的實用工具</p>
+      <h2 class="text-gradient mb-4">熱門框架與開發工具</h2>
+      <p class="text-lg" style="color: var(--text-tertiary);">Elixir 生態系的強大框架與實用工具</p>
     </div>
 
     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+      
+      <a href="https://www.phoenixframework.org/" target="_blank" rel="noopener" class="card card-hover group">
+        <div class="flex items-center gap-4 mb-3">
+          <div class="w-10 h-10 rounded-lg bg-[#FD4F00]/20 flex items-center justify-center">
+            <img src="/images/phoenix_logo.png" alt="Phoenix" class="w-6 h-6 object-contain">
+          </div>
+          <h3 class="text-lg font-semibold group-hover:text-[#FD4F00] transition-colors" style="color: var(--text-heading);">Phoenix Framework</h3>
+        </div>
+        <p class="text-sm" style="color: var(--text-tertiary);">高效能 Web 框架，支援即時通訊與 LiveView</p>
+      </a>
+
+      
+      <a href="https://ash-hq.org" target="_blank" rel="noopener" class="card card-hover group">
+        <div class="flex items-center gap-4 mb-3">
+          <div class="w-10 h-10 rounded-lg bg-amber-600/20 flex items-center justify-center">
+            <svg class="w-5 h-5 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/>
+            </svg>
+          </div>
+          <h3 class="text-lg font-semibold group-hover:text-amber-400 transition-colors" style="color: var(--text-heading);">Ash Framework</h3>
+        </div>
+        <p class="text-sm" style="color: var(--text-tertiary);">宣告式應用框架，快速建構 API 與領域模型</p>
+      </a>
+
+      
+      <a href="https://github.com/elixir-nx/nx" target="_blank" rel="noopener" class="card card-hover group">
+        <div class="flex items-center gap-4 mb-3">
+          <div class="w-10 h-10 rounded-lg bg-[#3C3766]/20 flex items-center justify-center">
+            <img src="/images/nx_logo.png" alt="Nx" class="w-6 h-6 object-contain">
+          </div>
+          <h3 class="text-lg font-semibold group-hover:text-[#9B7DD4] transition-colors" style="color: var(--text-heading);">Nx</h3>
+        </div>
+        <p class="text-sm" style="color: var(--text-tertiary);">多維張量與數值計算，支援 GPU 加速與機器學習</p>
+      </a>
+
+      
+      <a href="https://livebook.dev" target="_blank" rel="noopener" class="card card-hover group">
+        <div class="flex items-center gap-4 mb-3">
+          <div class="w-10 h-10 rounded-lg bg-green-600/20 flex items-center justify-center">
+            <svg class="w-5 h-5 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
+            </svg>
+          </div>
+          <h3 class="text-lg font-semibold group-hover:text-green-400 transition-colors" style="color: var(--text-heading);">Livebook</h3>
+        </div>
+        <p class="text-sm" style="color: var(--text-tertiary);">互動式筆記本，學習、探索與協作的最佳工具</p>
+      </a>
+
+      
+      <a href="https://native.live" target="_blank" rel="noopener" class="card card-hover group">
+        <div class="flex items-center gap-4 mb-3">
+          <div class="w-10 h-10 rounded-lg bg-purple-600/20 flex items-center justify-center">
+            <svg class="w-5 h-5 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"/>
+            </svg>
+          </div>
+          <h3 class="text-lg font-semibold group-hover:text-purple-400 transition-colors" style="color: var(--text-heading);">LiveView Native</h3>
+        </div>
+        <p class="text-sm" style="color: var(--text-tertiary);">用 Phoenix LiveView 構建原生 iOS/Android 應用</p>
+      </a>
+
+      
+      <a href="https://nerves-project.org/" target="_blank" rel="noopener" class="card card-hover group">
+        <div class="flex items-center gap-4 mb-3">
+          <div class="w-10 h-10 rounded-lg bg-[#375E9A]/20 flex items-center justify-center">
+            <img src="/images/nerves_logo.png" alt="Nerves" class="w-6 h-6 object-contain">
+          </div>
+          <h3 class="text-lg font-semibold group-hover:text-[#5B9BD5] transition-colors" style="color: var(--text-heading);">Nerves</h3>
+        </div>
+        <p class="text-sm" style="color: var(--text-tertiary);">IoT 與嵌入式系統開發平台，打造可靠的硬體裝置</p>
+      </a>
+
+      
+      <a href="https://tidewave.ai" target="_blank" rel="noopener" class="card card-hover group">
+        <div class="flex items-center gap-4 mb-3">
+          <div class="w-10 h-10 rounded-lg bg-[#0891B2]/20 flex items-center justify-center">
+            <img src="/images/taiwave_logo.svg" alt="Tidewave" class="w-6 h-6 object-contain">
+          </div>
+          <h3 class="text-lg font-semibold group-hover:text-[#0891B2] transition-colors" style="color: var(--text-heading);">Tidewave</h3>
+        </div>
+        <p class="text-sm" style="color: var(--text-tertiary);">AI 驅動的 Elixir 開發助手，提升編碼效率</p>
+      </a>
+
+      
       <a href="https://hex.pm" target="_blank" rel="noopener" class="card card-hover group">
         <div class="flex items-center gap-4 mb-3">
           <div class="w-10 h-10 rounded-lg bg-elixir-600/20 flex items-center justify-center">
@@ -537,6 +643,7 @@
         <p class="text-sm" style="color: var(--text-tertiary);">Elixir 套件管理平台，尋找與發布套件</p>
       </a>
 
+      
       <a href="https://hexdocs.pm" target="_blank" rel="noopener" class="card card-hover group">
         <div class="flex items-center gap-4 mb-3">
           <div class="w-10 h-10 rounded-lg bg-blue-600/20 flex items-center justify-center">
@@ -547,18 +654,6 @@
           <h3 class="text-lg font-semibold group-hover:text-blue-400 transition-colors" style="color: var(--text-heading);">HexDocs</h3>
         </div>
         <p class="text-sm" style="color: var(--text-tertiary);">套件文件托管平台，瀏覽 API 文件</p>
-      </a>
-
-      <a href="https://livebook.dev" target="_blank" rel="noopener" class="card card-hover group">
-        <div class="flex items-center gap-4 mb-3">
-          <div class="w-10 h-10 rounded-lg bg-green-600/20 flex items-center justify-center">
-            <svg class="w-5 h-5 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
-            </svg>
-          </div>
-          <h3 class="text-lg font-semibold group-hover:text-green-400 transition-colors" style="color: var(--text-heading);">Livebook</h3>
-        </div>
-        <p class="text-sm" style="color: var(--text-tertiary);">互動式筆記本，學習與探索 Elixir</p>
       </a>
     </div>
   </div>
@@ -608,13 +703,6 @@
             </svg>
           </a>
           
-          
-          <a href="https://www.meetup.com/elixirtw-taipei" target="_blank" rel="noopener" class="w-9 h-9 rounded-lg bg-dark-800 flex items-center justify-center text-gray-400 hover:text-elixir-400 hover:bg-dark-700 transition-all" aria-label="Meetup">
-            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M6.98 21.28c-1.778-.135-3.116-.627-4.18-1.59C1.322 18.356.51 16.122.786 14.188c.168-1.186.637-2.118 1.542-3.066.522-.545.923-.852 1.67-1.272.614-.345.796-.488.796-.623 0-.067-.05-.244-.113-.395-.209-.51-.275-.828-.275-1.358.001-.776.19-1.358.65-2.007.326-.457.91-.971 1.373-1.206.225-.114.258-.146.258-.252 0-.205.134-.61.308-.93.46-.852 1.326-1.46 2.48-1.742.388-.095 1.208-.125 1.591-.058 1.055.183 1.913.69 2.475 1.465.225.31.496.836.579 1.122.056.191.063.2.291.368.96.703 1.605 1.682 1.81 2.748.083.428.086 1.187.007 1.573-.138.668-.383 1.217-.76 1.7-.1.128-.183.25-.183.27 0 .021.048.124.107.23.365.654.575 1.512.575 2.35 0 1.41-.527 2.593-1.572 3.526-.78.696-1.79 1.143-3.017 1.335-.488.076-1.48.1-1.943.046l-.288-.033-.17.2c-.584.694-1.416 1.216-2.374 1.49-.51.146-1.386.226-1.923.177zm1.276-1.414c.77-.175 1.4-.567 1.844-1.147.147-.192.164-.235.136-.346-.023-.09-.13-.208-.405-.443-.476-.407-.732-.712-1.003-1.193-.445-.793-.569-1.575-.41-2.594.073-.466.063-.538-.117-.839a2.4 2.4 0 0 0-.551-.591c-.59-.462-.877-.97-.942-1.668-.052-.558.068-1.074.363-1.563.087-.145.143-.278.125-.296-.089-.09-.736-.288-1.093-.336a2.62 2.62 0 0 0-1.65.268c-.552.284-.947.73-1.138 1.288-.117.341-.114.928.006 1.295.125.381.44.89.73 1.177.1.1.233.227.296.282l.115.1-.15.198c-.523.691-.785 1.46-.826 2.427-.036.862.138 1.578.568 2.335.543.958 1.387 1.563 2.519 1.806.365.079 1.195.066 1.583-.06zm7.23-.41c.997-.287 1.787-.896 2.292-1.77.28-.482.448-.998.527-1.612.135-1.054-.17-2.147-.834-2.986-.186-.235-.179-.258.133-.484.643-.465 1.07-1.142 1.233-1.954.063-.312.055-1.003-.014-1.318-.18-.816-.596-1.46-1.243-1.924-.218-.156-.29-.239-.29-.335 0-.212-.178-.66-.37-.93-.437-.612-1.042-.978-1.858-1.122-.348-.062-1.018-.046-1.35.033-.576.136-.998.356-1.395.73-.356.334-.586.686-.764 1.17-.066.178-.09.203-.278.29-.798.366-1.443 1.084-1.72 1.914-.16.48-.206.875-.162 1.393.071.846.43 1.554 1.082 2.135.233.208.276.267.276.383 0 .1-.038.178-.145.3-.227.256-.433.667-.53 1.056-.101.41-.103 1.073-.002 1.485.165.68.55 1.313 1.066 1.757.181.155.566.41.7.463.05.02.06.06.06.244 0 .401.133.947.327 1.344.382.78 1.066 1.354 1.952 1.636.39.125 1.103.155 1.508.063z"/>
-            </svg>
-          </a>
-          
         </div>
       </div>
 
@@ -633,7 +721,6 @@
       <div>
         <h4 class="font-semibold text-white mb-4">參與社群</h4>
         <ul class="space-y-2">
-          <li><a href="/meetup" class="text-gray-400 hover:text-elixir-400 transition-colors text-sm">小聚活動</a></li>
           <li><a href="/posts" class="text-gray-400 hover:text-elixir-400 transition-colors text-sm">部落格</a></li>
           <li><a href="/consulting" class="text-gray-400 hover:text-elixir-400 transition-colors text-sm">顧問諮詢</a></li>
           
@@ -647,7 +734,7 @@
         <h4 class="font-semibold text-white mb-4">相關資源</h4>
         <ul class="space-y-2">
           <li><a href="https://elixir-lang.org" target="_blank" rel="noopener" class="text-gray-400 hover:text-elixir-400 transition-colors text-sm">Elixir 官網</a></li>
-          <li><a href="https://hexdocs.pm" target="_blank" rel="noopener" class="text-gray-400 hover:text-elixir-400 transition-colors text-sm">HexDocs</a></li>
+          <li><a href="https://elixirforum.com/" target="_blank" rel="noopener" class="text-gray-400 hover:text-elixir-400 transition-colors text-sm">Elixir Forum</a></li>
           <li><a href="https://hex.pm" target="_blank" rel="noopener" class="text-gray-400 hover:text-elixir-400 transition-colors text-sm">Hex.pm</a></li>
           <li><a href="https://phoenixframework.org" target="_blank" rel="noopener" class="text-gray-400 hover:text-elixir-400 transition-colors text-sm">Phoenix Framework</a></li>
         </ul>
@@ -658,16 +745,6 @@
     <div class="mt-12 pt-8 border-t border-dark-800 flex flex-col md:flex-row justify-between items-center gap-4">
       <p class="text-gray-500 text-sm">
         &copy; 2025 Elixir Taiwan. All rights reserved.
-      </p>
-      <p class="text-gray-500 text-sm flex items-center gap-2">
-        Built with
-        <svg class="w-4 h-4 text-red-500" fill="currentColor" viewBox="0 0 20 20">
-          <path fill-rule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" clip-rule="evenodd"/>
-        </svg>
-        using
-        <a href="https://gohugo.io" target="_blank" rel="noopener" class="text-gray-400 hover:text-elixir-400">Hugo</a>
-        &
-        <a href="https://tailwindcss.com" target="_blank" rel="noopener" class="text-gray-400 hover:text-elixir-400">Tailwind CSS</a>
       </p>
     </div>
   </div>

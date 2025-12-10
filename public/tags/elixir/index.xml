@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Elixir on Elixir Taiwan</title>
-    <link>http://localhost:60390/tags/elixir/</link>
+    <link>http://localhost:1313/tags/elixir/</link>
     <description>Recent content in Elixir on Elixir Taiwan</description>
     <generator>Hugo</generator>
     <language>en-US</language>
     <lastBuildDate>Sun, 05 Jan 2025 06:53:32 +0800</lastBuildDate>
-    <atom:link href="http://localhost:60390/tags/elixir/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/elixir/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>為什麼要學函數式語言</title>
-      <link>http://localhost:60390/posts/why_functional/</link>
+      <link>http://localhost:1313/posts/why_functional/</link>
       <pubDate>Sun, 05 Jan 2025 06:53:32 +0800</pubDate>
-      <guid>http://localhost:60390/posts/why_functional/</guid>
+      <guid>http://localhost:1313/posts/why_functional/</guid>
       <description>GenAI 興起的現在，為什麼還要學新語言？</description>
     </item>
   </channel>

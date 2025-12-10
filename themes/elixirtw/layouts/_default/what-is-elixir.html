@@ -23,7 +23,7 @@
         <h2 class="mb-6" style="color: var(--text-heading);">誕生背景</h2>
         <div class="space-y-4" style="color: var(--text-secondary);">
           <p>
-            Elixir 由 <strong style="color: var(--text-heading);">José Valim</strong> 於 2011 年創造。José 曾是 Ruby on Rails 核心團隊成員，他希望打造一門結合 Ruby 優雅語法與 Erlang 強大並發能力的語言。
+            Elixir 由 <strong style="color: var(--text-heading);">José Valim</strong> 於 2012 年創造。José 曾是 Ruby on Rails 核心團隊成員，他希望打造一門結合 Ruby 優雅語法與 Erlang 強大並發能力的語言。
           </p>
           <p>
             Elixir 運行在 <strong style="color: var(--text-heading);">BEAM</strong>（Erlang 虛擬機）之上，這個虛擬機最初由愛立信為電信系統開發，已經過數十年的實戰驗證，以其卓越的並發處理能力與容錯設計聞名。
@@ -39,7 +39,7 @@
           <img src="https://avatars.githubusercontent.com/u/9582" alt="José Valim" class="w-16 h-16 rounded-full">
           <div>
             <h4 class="font-semibold" style="color: var(--text-heading);">José Valim</h4>
-            <p class="text-sm" style="color: var(--text-tertiary);">Elixir 創造者</p>
+            <p class="text-sm" style="color: var(--text-tertiary);">The creator of Elixir programming language</p>
           </div>
         </div>
         <blockquote class="italic border-l-4 border-elixir-500 pl-4" style="color: var(--text-secondary);">
@@ -197,59 +197,47 @@ list
     </div>
 
     <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-      <!-- Web 開發 -->
-      <div class="card card-hover group">
-        <div class="w-12 h-12 rounded-xl bg-orange-600/20 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-          <svg class="w-6 h-6 text-orange-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"/>
-          </svg>
+      <!-- Phoenix LiveView -->
+      <a href="https://hexdocs.pm/phoenix_live_view" target="_blank" rel="noopener" class="card card-hover group">
+        <div class="w-14 h-14 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform" style="background-color: #FD4F0020;">
+          <img src="/images/phoenix_logo.png" alt="Phoenix" class="w-10 h-10 object-contain">
         </div>
-        <h3 class="text-lg font-semibold mb-2 group-hover:text-orange-400 transition-colors" style="color: var(--text-heading);">Web 開發</h3>
-        <p class="text-sm mb-3" style="color: var(--text-tertiary);">
-          高效能 Web 框架與即時互動 UI
-        </p>
-        <div class="flex flex-wrap gap-2">
-          <a href="https://phoenixframework.org" target="_blank" rel="noopener" class="text-xs px-2 py-1 rounded-full bg-orange-600/20 text-orange-400 hover:bg-orange-600/30 transition-colors">Phoenix</a>
-          <a href="https://hexdocs.pm/phoenix_live_view" target="_blank" rel="noopener" class="text-xs px-2 py-1 rounded-full bg-orange-600/20 text-orange-400 hover:bg-orange-600/30 transition-colors">LiveView</a>
-        </div>
-      </div>
-
-      <!-- 資料庫 -->
-      <a href="https://hexdocs.pm/ecto" target="_blank" rel="noopener" class="card card-hover group">
-        <div class="w-12 h-12 rounded-xl bg-green-600/20 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-          <svg class="w-6 h-6 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4"/>
-          </svg>
-        </div>
-        <h3 class="text-lg font-semibold mb-2 group-hover:text-green-400 transition-colors" style="color: var(--text-heading);">Ecto</h3>
+        <h3 class="text-lg font-semibold mb-2 group-hover:text-orange-400 transition-colors" style="color: var(--text-heading);">Phoenix LiveView</h3>
         <p class="text-sm" style="color: var(--text-tertiary);">
-          資料庫抽象層與查詢工具，支援 PostgreSQL、MySQL 等
+          Stack Overflow 票選最受喜愛的 Web 框架，無需撰寫複雜的 JavaScript 即可打造即時互動的網頁體驗！
         </p>
       </a>
 
-      <!-- 機器學習 -->
+      <!-- Tidewave -->
+      <a href="https://tidewave.ai/" target="_blank" rel="noopener" class="card card-hover group">
+        <div class="w-14 h-14 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform" style="background-color: #0EA5E920;">
+          <img src="/images/taiwave_logo.svg" alt="Tidewave" class="w-10 h-10 object-contain">
+        </div>
+        <h3 class="text-lg font-semibold mb-2 group-hover:text-cyan-400 transition-colors" style="color: var(--text-heading);">Tidewave</h3>
+        <p class="text-sm" style="color: var(--text-tertiary);">
+          瀏覽器內 AI 編程代理，讓 AI 直接在你的開發環境中修改全端應用程式
+        </p>
+      </a>
+
+      <!-- Numerical Elixir -->
       <a href="https://github.com/elixir-nx" target="_blank" rel="noopener" class="card card-hover group">
-        <div class="w-12 h-12 rounded-xl bg-rose-600/20 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-          <svg class="w-6 h-6 text-rose-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
-          </svg>
+        <div class="w-14 h-14 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform" style="background-color: #8B5CF620;">
+          <img src="/images/nx_logo.png" alt="Numerical Elixir" class="w-10 h-10 object-contain">
         </div>
-        <h3 class="text-lg font-semibold mb-2 group-hover:text-rose-400 transition-colors" style="color: var(--text-heading);">Nx 機器學習</h3>
+        <h3 class="text-lg font-semibold mb-2 group-hover:text-purple-400 transition-colors" style="color: var(--text-heading);">Numerical Elixir</h3>
         <p class="text-sm" style="color: var(--text-tertiary);">
-          數值計算與機器學習生態系，支援 GPU 加速與神經網路
+          數值計算與機器學習生態系，包含 Nx 張量運算、Axon 神經網路與 Bumblebee 預訓練模型
         </p>
       </a>
 
-      <!-- IoT -->
+      <!-- Nerves -->
       <a href="https://nerves-project.org" target="_blank" rel="noopener" class="card card-hover group">
-        <div class="w-12 h-12 rounded-xl bg-blue-600/20 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-          <svg class="w-6 h-6 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"/>
-          </svg>
+        <div class="w-14 h-14 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform" style="background-color: #22C55E20;">
+          <img src="/images/nerves_logo.png" alt="Nerves" class="w-10 h-10 object-contain">
         </div>
-        <h3 class="text-lg font-semibold mb-2 group-hover:text-blue-400 transition-colors" style="color: var(--text-heading);">Nerves IoT</h3>
+        <h3 class="text-lg font-semibold mb-2 group-hover:text-green-400 transition-colors" style="color: var(--text-heading);">Nerves</h3>
         <p class="text-sm" style="color: var(--text-tertiary);">
-          嵌入式系統與 IoT 開發平台，將 Elixir 帶入硬體世界
+          嵌入式系統與 IoT 開發平台，用 Elixir 打造可靠的硬體應用
         </p>
       </a>
     </div>
@@ -287,31 +275,31 @@ list
           </tr>
           <tr class="border-b" style="border-color: var(--border-primary);">
             <td class="py-4 px-4 font-medium" style="color: var(--text-heading);">並發模型</td>
-            <td class="py-4 px-4 text-elixir-600 dark:text-elixir-300">Actor Model</td>
-            <td class="py-4 px-4">Event Loop</td>
-            <td class="py-4 px-4">Goroutines</td>
-            <td class="py-4 px-4">Thread/GIL</td>
+            <td class="py-4 px-4 text-elixir-600 dark:text-elixir-300">Actor Model (輕量 Process)</td>
+            <td class="py-4 px-4">Event Loop (單執行緒)</td>
+            <td class="py-4 px-4">Goroutines (CSP)</td>
+            <td class="py-4 px-4">Thread + GIL</td>
           </tr>
           <tr class="border-b" style="border-color: var(--border-primary);">
             <td class="py-4 px-4 font-medium" style="color: var(--text-heading);">容錯機制</td>
-            <td class="py-4 px-4 text-elixir-600 dark:text-elixir-300">Supervisor Tree</td>
-            <td class="py-4 px-4">PM2/Cluster</td>
-            <td class="py-4 px-4">手動處理</td>
+            <td class="py-4 px-4 text-elixir-600 dark:text-elixir-300">OTP Supervisor</td>
+            <td class="py-4 px-4">需外部工具 (PM2)</td>
+            <td class="py-4 px-4">顯式錯誤回傳</td>
             <td class="py-4 px-4">例外處理</td>
           </tr>
           <tr class="border-b" style="border-color: var(--border-primary);">
-            <td class="py-4 px-4 font-medium" style="color: var(--text-heading);">熱更新</td>
-            <td class="py-4 px-4 text-elixir-600 dark:text-elixir-300">原生支援</td>
-            <td class="py-4 px-4">需額外工具</td>
-            <td class="py-4 px-4">需重新部署</td>
-            <td class="py-4 px-4">需額外工具</td>
+            <td class="py-4 px-4 font-medium" style="color: var(--text-heading);">分散式支援</td>
+            <td class="py-4 px-4 text-elixir-600 dark:text-elixir-300">原生叢集</td>
+            <td class="py-4 px-4">需額外架構</td>
+            <td class="py-4 px-4">需額外架構</td>
+            <td class="py-4 px-4">需額外架構</td>
           </tr>
           <tr>
-            <td class="py-4 px-4 font-medium" style="color: var(--text-heading);">適合場景</td>
-            <td class="py-4 px-4 text-elixir-600 dark:text-elixir-300">即時、分散式</td>
-            <td class="py-4 px-4">I/O 密集</td>
-            <td class="py-4 px-4">系統程式</td>
-            <td class="py-4 px-4">快速開發</td>
+            <td class="py-4 px-4 font-medium" style="color: var(--text-heading);">優勢</td>
+            <td class="py-4 px-4 text-elixir-600 dark:text-elixir-300">即時系統、高併發、容錯</td>
+            <td class="py-4 px-4">生態系豐富、前後端統一</td>
+            <td class="py-4 px-4">效能佳、部署簡單</td>
+            <td class="py-4 px-4">開發快速、語法優雅</td>
           </tr>
         </tbody>
       </table>

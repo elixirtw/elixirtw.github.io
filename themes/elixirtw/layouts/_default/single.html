@@ -4,14 +4,14 @@
     <div class="max-w-4xl mx-auto">
       <!-- Breadcrumb -->
       <nav class="mb-8">
-        <ol class="flex items-center gap-2 text-sm text-gray-400">
+        <ol class="flex items-center gap-2 text-sm" style="color: var(--text-tertiary);">
           <li><a href="/" class="hover:text-elixir-400 transition-colors">首頁</a></li>
-          <li><span class="text-gray-600">/</span></li>
+          <li><span style="color: var(--border-primary);">/</span></li>
           {{ if eq .Section "posts" }}
           <li><a href="/posts/" class="hover:text-elixir-400 transition-colors">部落格</a></li>
-          <li><span class="text-gray-600">/</span></li>
+          <li><span style="color: var(--border-primary);">/</span></li>
           {{ end }}
-          <li class="text-gray-300">{{ .Title }}</li>
+          <li style="color: var(--text-secondary);">{{ .Title }}</li>
         </ol>
       </nav>
 
@@ -25,13 +25,13 @@
         </div>
         {{ end }}
 
-        <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">{{ .Title }}</h1>
+        <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-6" style="color: var(--text-heading);">{{ .Title }}</h1>
 
         {{ with .Params.summary }}
-        <p class="text-xl text-gray-300 leading-relaxed mb-6">{{ . }}</p>
+        <p class="text-xl leading-relaxed mb-6" style="color: var(--text-secondary);">{{ . }}</p>
         {{ end }}
 
-        <div class="flex flex-wrap items-center gap-4 text-gray-400 text-sm border-t border-dark-700 pt-6">
+        <div class="flex flex-wrap items-center gap-4 text-sm border-t pt-6" style="color: var(--text-tertiary); border-color: var(--border-primary);">
           {{ with .Params.authorName }}
           <div class="flex items-center gap-2">
             {{ $authorId := $.Params.authorId }}
@@ -42,52 +42,40 @@
           </div>
           {{ end }}
 
-          <span class="text-gray-600">|</span>
+          <span style="color: var(--border-primary);">|</span>
 
           <time datetime="{{ .Date.Format "2006-01-02" }}">
             {{ .Date.Format "2006 年 01 月 02 日" }}
           </time>
 
           {{ if .Params.readTime }}
-          <span class="text-gray-600">|</span>
+          <span style="color: var(--border-primary);">|</span>
           <span>{{ .ReadingTime }} 分鐘閱讀</span>
           {{ end }}
         </div>
       </header>
 
       <!-- Article Content -->
-      <div class="prose prose-invert prose-lg max-w-none
-                  prose-headings:text-white prose-headings:font-bold
-                  prose-h2:text-2xl prose-h2:mt-12 prose-h2:mb-4
-                  prose-h3:text-xl prose-h3:mt-8 prose-h3:mb-3
-                  prose-p:text-gray-300 prose-p:leading-relaxed
-                  prose-a:text-elixir-400 prose-a:no-underline hover:prose-a:underline
-                  prose-strong:text-white
-                  prose-code:text-elixir-400 prose-code:bg-dark-800 prose-code:px-1.5 prose-code:py-0.5 prose-code:rounded prose-code:before:content-none prose-code:after:content-none
-                  prose-pre:bg-dark-900 prose-pre:border prose-pre:border-dark-700
-                  prose-blockquote:border-l-elixir-500 prose-blockquote:bg-dark-900/50 prose-blockquote:py-1 prose-blockquote:px-4 prose-blockquote:rounded-r-lg
-                  prose-li:text-gray-300
-                  prose-img:rounded-xl prose-img:shadow-lg
-                  prose-hr:border-dark-700">
+      <div class="prose prose-lg max-w-none article-content">
         {{ .Content }}
       </div>
 
       <!-- Author Box -->
       {{ with .Params.authorName }}
-      <div class="mt-16 pt-8 border-t border-dark-700">
+      <div class="mt-16 pt-8 border-t" style="border-color: var(--border-primary);">
         <div class="card flex flex-col sm:flex-row items-center sm:items-start gap-6">
           {{ $authorId := $.Params.authorId }}
           {{ if $authorId }}
           <img src="https://github.com/{{ $authorId }}.png" alt="{{ . }}" class="w-20 h-20 rounded-full ring-2 ring-elixir-500/50">
           {{ end }}
           <div class="text-center sm:text-left">
-            <h3 class="text-lg font-semibold text-white mb-1">{{ . }}</h3>
+            <h3 class="text-lg font-semibold mb-1" style="color: var(--text-heading);">{{ . }}</h3>
             {{ if $authorId }}
             <a href="https://github.com/{{ $authorId }}" target="_blank" rel="noopener" class="text-elixir-400 hover:text-elixir-300 text-sm">
               @{{ $authorId }}
             </a>
             {{ end }}
-            <p class="text-gray-400 mt-2">Elixir Taiwan 社群成員</p>
+            <p class="mt-2" style="color: var(--text-tertiary);">Elixir Taiwan 社群成員</p>
           </div>
         </div>
       </div>
@@ -95,8 +83,8 @@
 
       <!-- Giscus Comments -->
       {{ if and .Site.Params.giscus.enable (eq .Section "posts") }}
-      <div class="mt-16 pt-8 border-t border-dark-700">
-        <h3 class="text-xl font-semibold text-white mb-6">留言討論</h3>
+      <div class="mt-16 pt-8 border-t" style="border-color: var(--border-primary);">
+        <h3 class="text-xl font-semibold mb-6" style="color: var(--text-heading);">留言討論</h3>
         <script src="https://giscus.app/client.js"
                 data-repo="{{ .Site.Params.giscus.repo }}"
                 data-repo-id="{{ .Site.Params.giscus.repoid }}"
@@ -116,21 +104,21 @@
       {{ end }}
 
       <!-- Navigation -->
-      <nav class="mt-16 pt-8 border-t border-dark-700">
+      <nav class="mt-16 pt-8 border-t" style="border-color: var(--border-primary);">
         <div class="flex flex-col sm:flex-row justify-between gap-4">
           {{ with .PrevInSection }}
-          <a href="{{ .Permalink }}" class="card card-hover flex-1 group">
-            <span class="text-sm text-gray-500 mb-1 block">上一篇</span>
-            <span class="text-white group-hover:text-elixir-400 transition-colors">{{ .Title }}</span>
+          <a href="{{ .RelPermalink }}" class="card card-hover flex-1 group">
+            <span class="text-sm mb-1 block" style="color: var(--text-tertiary);">上一篇</span>
+            <span class="group-hover:text-elixir-400 transition-colors" style="color: var(--text-heading);">{{ .Title }}</span>
           </a>
           {{ else }}
           <div class="flex-1"></div>
           {{ end }}
 
           {{ with .NextInSection }}
-          <a href="{{ .Permalink }}" class="card card-hover flex-1 text-right group">
-            <span class="text-sm text-gray-500 mb-1 block">下一篇</span>
-            <span class="text-white group-hover:text-elixir-400 transition-colors">{{ .Title }}</span>
+          <a href="{{ .RelPermalink }}" class="card card-hover flex-1 text-right group">
+            <span class="text-sm mb-1 block" style="color: var(--text-tertiary);">下一篇</span>
+            <span class="group-hover:text-elixir-400 transition-colors" style="color: var(--text-heading);">{{ .Title }}</span>
           </a>
           {{ end }}
         </div>
