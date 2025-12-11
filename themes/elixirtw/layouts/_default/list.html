@@ -1,0 +1,88 @@
+{{ define "main" }}
+<section class="section">
+  <div class="container-custom">
+    <!-- Page Header -->
+    <header class="mb-12">
+      <h1 class="text-gradient mb-4">{{ .Title }}</h1>
+      {{ with .Description }}
+      <p class="text-gray-400 text-lg max-w-2xl">{{ . }}</p>
+      {{ end }}
+      {{ with .Content }}
+      <div class="prose prose-invert prose-lg max-w-none mt-6 prose-p:text-gray-300 prose-a:text-elixir-400">
+        {{ . }}
+      </div>
+      {{ end }}
+    </header>
+
+    <!-- Posts List -->
+    {{ if .Pages }}
+    <div class="grid gap-6">
+      {{ range .Pages }}
+      <article class="card card-hover group">
+        <div class="flex flex-col md:flex-row md:items-center gap-4">
+          <div class="flex-1">
+            <div class="flex flex-wrap items-center gap-2 mb-2">
+              {{ with .Params.tags }}{{ range first 2 . }}
+              <span class="tag text-xs">{{ . }}</span>
+              {{ end }}{{ end }}
+              <span class="text-gray-500 text-sm">{{ .Date.Format "2006-01-02" }}</span>
+            </div>
+            <h2 class="text-xl font-semibold text-white group-hover:text-elixir-400 transition-colors mb-2">
+              <a href="{{ .Permalink }}">{{ .Title }}</a>
+            </h2>
+            <p class="text-gray-400 text-sm line-clamp-2">
+              {{ with .Params.summary }}{{ . }}{{ else }}{{ .Summary }}{{ end }}
+            </p>
+          </div>
+          {{ with .Params.authorName }}
+          <div class="flex items-center gap-2 text-sm text-gray-500">
+            {{ $authorId := $.Params.authorId }}
+            {{ if $authorId }}
+            <img src="https://github.com/{{ $authorId }}.png" alt="{{ . }}" class="w-6 h-6 rounded-full">
+            {{ end }}
+            <span>{{ . }}</span>
+          </div>
+          {{ end }}
+        </div>
+      </article>
+      {{ end }}
+    </div>
+
+    <!-- Pagination -->
+    {{ $paginator := .Paginator }}
+    {{ if gt $paginator.TotalPages 1 }}
+    <nav class="mt-12 flex justify-center">
+      <div class="flex items-center gap-2">
+        {{ if $paginator.HasPrev }}
+        <a href="{{ $paginator.Prev.URL }}" class="btn btn-secondary px-4 py-2">
+          <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+          </svg>
+          上一頁
+        </a>
+        {{ end }}
+
+        <span class="px-4 py-2 text-gray-400">
+          第 {{ $paginator.PageNumber }} / {{ $paginator.TotalPages }} 頁
+        </span>
+
+        {{ if $paginator.HasNext }}
+        <a href="{{ $paginator.Next.URL }}" class="btn btn-secondary px-4 py-2">
+          下一頁
+          <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+          </svg>
+        </a>
+        {{ end }}
+      </div>
+    </nav>
+    {{ end }}
+
+    {{ else }}
+    <div class="text-center py-12">
+      <p class="text-gray-400">目前還沒有內容，敬請期待！</p>
+    </div>
+    {{ end }}
+  </div>
+</section>
+{{ end }}

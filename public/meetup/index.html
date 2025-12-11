@@ -1,8 +1,689 @@
-<!doctype html><html lang=en-US dir=ltr><head><meta charset=utf-8><meta name=viewport content="width=device-width"><link rel=icon type=image/ico href=https://elixir.tw//favicon.ico><link rel=icon type=image/png sizes=16x16 href=https://elixir.tw//favicon-16x16.png><link rel=icon type=image/png sizes=32x32 href=https://elixir.tw//favicon-32x32.png><link rel=icon type=image/png sizes=192x192 href=https://elixir.tw//android-chrome-192x192.png><link rel=apple-touch-icon sizes=180x180 href=https://elixir.tw//apple-touch-icon.png><meta name=description content><title>每月小聚 | Elixir Taiwan Blog
-</title><link rel=canonical href=https://elixir.tw/meetup/><meta property="og:url" content="https://elixir.tw/meetup/"><meta property="og:site_name" content="Elixir Taiwan Blog"><meta property="og:title" content="每月小聚"><meta property="og:description" content="時間：每個月的最後一個週二 * 地點：五倍學院 or 言文字 * 費用：場地的飲料費用 報名：可在 meetup.com 上事先報名，但也歡迎臨時 walk-in 及帶朋友來 * 地點或週次有可能因場地或主辦情況異動，請至 facebook/discord/meetup 確認"><meta property="og:locale" content="en_US"><meta property="og:type" content="article"><link rel=stylesheet href=/assets/combined.min.7d78435e83a3a6b47502d11827b5605eb4d63ea033c6e25e16e25354fb26dd23.css media=all></head><body class=auto><div class=content><header><div class=header><h1 class=header-title><a href=https://elixir.tw/>Elixir Taiwan Blog</a></h1><div class=flex><p class=small><a href=/>/首頁</a></p><p class=small><a href=/posts>/文章</a></p><p class=small><a href=/resources>/學習資源</a></p><p class=small><a href=/about>/關於我們</a></p><p class=small><a href=/meetup>/小聚</a></p></div></div></header><main class=main><div><div class=single-intro-container><h1 class=single-title>每月小聚</h1><p class=single-readtime></p></div><div class=single-content><ul><li>時間：每個月的最後一個週二 *</li><li>地點：<a href=https://www.facebook.com/5xruby>五倍學院</a> or <a href=https://www.facebook.com/emoji0701>言文字</a> *</li><li>費用：場地的飲料費用</li><li>報名：可在 meetup.com 上事先報名，但也歡迎臨時 walk-in 及帶朋友來</li></ul><p>* 地點或週次有可能因場地或主辦情況異動，請至 <a href=https://www.facebook.com/groups/elixir.tw>facebook</a>/<a href=https://discord.com/invite/9zBmPfrrVP>discord</a>/<a href=https://www.meetup.com/elixirtw-taipei>meetup</a> 確認</p><h3 class=heading id=基本規則沒有笨問題--互動交流>基本規則：沒有笨問題 + 互動交流
-<a href=#%e5%9f%ba%e6%9c%ac%e8%a6%8f%e5%89%87%e6%b2%92%e6%9c%89%e7%ac%a8%e5%95%8f%e9%a1%8c--%e4%ba%92%e5%8b%95%e4%ba%a4%e6%b5%81>#</a></h3><p>Elixir Taiwan 的 meetup 是對新手非常友善的。不管你是 Elixir 的熟手，或是只是第一次接觸程式語言，我們都歡迎所有對 Elixir 或函數式程式語言有興趣的人來參與。</p><h3 class=heading id=聚會流程>聚會流程
-<a href=#%e8%81%9a%e6%9c%83%e6%b5%81%e7%a8%8b>#</a></h3><ol><li>介紹: 大約 7:30 左右會讓大家簡單快速介紹自己跟最近在玩的東西。如果你有什麼好奇的問題，也可以提一下，在後續的時段能夠深入討論。當然我們理解有內向的人的存在，所以說「我只是來聽聽」也是完全 ok 的。</li><li>分享：聚會經常會有成員們的主題分享，沒有的話我們也可以找個最近在玩的東西、或是 <a href=https://adventofcode.com/>AOC</a> 或 <a href=https://exercism.org/>Exercism</a> 的題目試試看。</li><li>討論與閒聊：關於分享的主題，或是介紹環節提到的問題，可以在這個時候深入的找人聊，主題完全無限制，也歡迎分組討論。</li></ol><h3 class=heading id=講者募集>講者募集
-<a href=#%e8%ac%9b%e8%80%85%e5%8b%9f%e9%9b%86>#</a></h3><p>如果你有想要分享的議題，不管是最近玩到一半的小東西，或是在工作上遇到的關卡想發表，都歡迎你跟主辦單位連絡。如果你有想要瞭解的 Elixir 主題，也可以在社群媒體上跟大家許願。</p></div><div class=back-to-top><a href=#top>back to top</a></div></div></main></div><footer><p>Powered by
-<a href=https://gohugo.io/>Hugo</a>
-and
-<a href=https://github.com/tomfran/typo>tomfran/typo</a></p></footer></body><script>function isAuto(){return document.body.classList.contains("auto")}function setTheme(){if(!isAuto())return;document.body.classList.remove("auto");let e="light";window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches&&(e="dark"),document.body.classList.add(e)}function invertBody(){document.body.classList.toggle("dark"),document.body.classList.toggle("light")}isAuto()&&window.matchMedia("(prefers-color-scheme: dark)").addListener(invertBody),setTheme()</script></html>
+<!DOCTYPE html>
+<html lang="en">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  
+  <script>
+    (function() {
+      const stored = localStorage.getItem('theme');
+      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      if (stored === 'dark' || (!stored && prefersDark)) {
+        document.documentElement.classList.add('dark');
+      }
+    })();
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Elixir Taiwan 每月定期小聚，技術分享與交流">
+
+  <title>小聚活動 | Elixir Taiwan</title>
+
+  
+  <link rel="icon" type="image/svg+xml" href="/images/elixir_tw.svg">
+  <link rel="apple-touch-icon" href="/images/elixir_tw.png">
+
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
+
+  
+  <link rel="stylesheet" href="/css/main.css">
+
+  
+  <meta property="og:title" content="小聚活動">
+  <meta property="og:description" content="Elixir Taiwan 每月定期小聚，技術分享與交流">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="http://localhost:1313/meetup/">
+  <meta property="og:image" content="http://localhost:1313/images/og-image.png">
+  <meta property="og:locale" content="zh_TW">
+
+  
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@elixirtw">
+
+  
+</head>
+<body class="min-h-screen flex flex-col">
+  <header class="sticky top-0 z-50 backdrop-blur-lg border-b" style="background-color: color-mix(in srgb, var(--bg-primary) 80%, transparent); border-color: var(--border-primary);">
+  <nav class="container-custom">
+    <div class="flex items-center justify-between h-16 md:h-20">
+      
+      <a href="/" class="flex items-center gap-3 group">
+        <img src="/images/elixir_tw.svg" alt="Elixir Taiwan" class="w-10 h-10 transition-transform group-hover:scale-110">
+        <span class="font-bold text-xl text-gradient hidden sm:block">Elixir Taiwan</span>
+      </a>
+
+      
+      <div class="hidden md:flex items-center gap-8">
+        
+        
+          <a href="/"
+             class="nav-link ">
+            首頁
+          </a>
+        
+          <a href="/about/"
+             class="nav-link ">
+            關於社群
+          </a>
+        
+          <a href="/what-is-elixir/"
+             class="nav-link ">
+            關於 Elixir
+          </a>
+        
+          <a href="/why-elixir/"
+             class="nav-link ">
+            Why Elixir
+          </a>
+        
+          <a href="/meetup/"
+             class="nav-link nav-link-active">
+            Meetup 小聚
+          </a>
+        
+          <a href="/resources/"
+             class="nav-link ">
+            學習資源
+          </a>
+        
+          <a href="/posts/"
+             class="nav-link ">
+            Blog
+          </a>
+        
+          <a href="/consulting/"
+             class="nav-link ">
+            顧問諮詢
+          </a>
+        
+      </div>
+
+      
+      <div class="flex items-center gap-4">
+        
+        <button type="button" id="theme-toggle" class="p-2 rounded-lg transition-colors" style="color: var(--text-tertiary);" aria-label="切換深色/淺色模式">
+          
+          <svg id="theme-icon-sun" class="w-5 h-5 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/>
+          </svg>
+          
+          <svg id="theme-icon-moon" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/>
+          </svg>
+        </button>
+
+        
+        <div class="hidden md:flex items-center gap-3">
+          
+          <a href="https://discord.com/invite/9zBmPfrrVP" target="_blank" rel="noopener" class="text-gray-400 hover:text-elixir-400 transition-colors" aria-label="Discord">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028 14.09 14.09 0 0 0 1.226-1.994.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z"/>
+            </svg>
+          </a>
+          
+          
+          <a href="https://www.facebook.com/groups/elixir.tw" target="_blank" rel="noopener" class="text-gray-400 hover:text-elixir-400 transition-colors" aria-label="Facebook">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+            </svg>
+          </a>
+          
+          
+          <a href="https://x.com/elixirtw" target="_blank" rel="noopener" class="text-gray-400 hover:text-elixir-400 transition-colors" aria-label="X (Twitter)">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+            </svg>
+          </a>
+          
+          
+          <a href="https://github.com/elixirtw" target="_blank" rel="noopener" class="text-gray-400 hover:text-elixir-400 transition-colors" aria-label="GitHub">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+            </svg>
+          </a>
+          
+        </div>
+
+        
+        <button type="button" id="mobile-menu-btn" class="md:hidden p-2 text-gray-400 hover:text-white" aria-label="開啟選單">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    
+    <div id="mobile-menu" class="hidden md:hidden pb-4">
+      <div class="flex flex-col gap-2">
+        
+        
+          <a href="/"
+             class="px-4 py-2 rounded-lg hover:bg-elixir-600/10"
+             style="color: var(--text-secondary);">
+            首頁
+          </a>
+        
+          <a href="/about/"
+             class="px-4 py-2 rounded-lg hover:bg-elixir-600/10"
+             style="color: var(--text-secondary);">
+            關於社群
+          </a>
+        
+          <a href="/what-is-elixir/"
+             class="px-4 py-2 rounded-lg hover:bg-elixir-600/10"
+             style="color: var(--text-secondary);">
+            關於 Elixir
+          </a>
+        
+          <a href="/why-elixir/"
+             class="px-4 py-2 rounded-lg hover:bg-elixir-600/10"
+             style="color: var(--text-secondary);">
+            Why Elixir
+          </a>
+        
+          <a href="/meetup/"
+             class="px-4 py-2 rounded-lg bg-elixir-600/20 text-elixir-400"
+             style="">
+            Meetup 小聚
+          </a>
+        
+          <a href="/resources/"
+             class="px-4 py-2 rounded-lg hover:bg-elixir-600/10"
+             style="color: var(--text-secondary);">
+            學習資源
+          </a>
+        
+          <a href="/posts/"
+             class="px-4 py-2 rounded-lg hover:bg-elixir-600/10"
+             style="color: var(--text-secondary);">
+            Blog
+          </a>
+        
+          <a href="/consulting/"
+             class="px-4 py-2 rounded-lg hover:bg-elixir-600/10"
+             style="color: var(--text-secondary);">
+            顧問諮詢
+          </a>
+        
+      </div>
+
+      
+      <div class="flex items-center gap-4 mt-4 px-4 pt-4 border-t" style="border-color: var(--border-primary);">
+        
+        <a href="https://discord.com/invite/9zBmPfrrVP" target="_blank" rel="noopener" class="text-gray-400 hover:text-elixir-400 transition-colors">
+          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028 14.09 14.09 0 0 0 1.226-1.994.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z"/>
+          </svg>
+        </a>
+        
+        
+        <a href="https://www.facebook.com/groups/elixir.tw" target="_blank" rel="noopener" class="text-gray-400 hover:text-elixir-400 transition-colors">
+          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+          </svg>
+        </a>
+        
+        
+        <a href="https://x.com/elixirtw" target="_blank" rel="noopener" class="text-gray-400 hover:text-elixir-400 transition-colors">
+          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+          </svg>
+        </a>
+        
+      </div>
+    </div>
+  </nav>
+</header>
+
+<script>
+  
+  const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+  const mobileMenu = document.getElementById('mobile-menu');
+
+  mobileMenuBtn.addEventListener('click', () => {
+    mobileMenu.classList.toggle('hidden');
+  });
+
+  
+  const themeToggle = document.getElementById('theme-toggle');
+  const sunIcon = document.getElementById('theme-icon-sun');
+  const moonIcon = document.getElementById('theme-icon-moon');
+
+  
+  function getThemePreference() {
+    const stored = localStorage.getItem('theme');
+    if (stored) return stored;
+    return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+  }
+
+  
+  function applyTheme(theme) {
+    if (theme === 'dark') {
+      document.documentElement.classList.add('dark');
+      sunIcon.classList.remove('hidden');
+      moonIcon.classList.add('hidden');
+    } else {
+      document.documentElement.classList.remove('dark');
+      sunIcon.classList.add('hidden');
+      moonIcon.classList.remove('hidden');
+    }
+  }
+
+  
+  applyTheme(getThemePreference());
+
+  
+  themeToggle.addEventListener('click', () => {
+    const currentTheme = document.documentElement.classList.contains('dark') ? 'dark' : 'light';
+    const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+    localStorage.setItem('theme', newTheme);
+    applyTheme(newTheme);
+  });
+
+  
+  window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
+    
+    if (!localStorage.getItem('theme')) {
+      applyTheme(e.matches ? 'dark' : 'light');
+    }
+  });
+</script>
+
+
+  <main class="flex-1">
+    
+
+<section class="relative py-20 overflow-hidden" style="background-color: var(--bg-primary);">
+  <div class="absolute inset-0 bg-grid opacity-20 hidden dark:block"></div>
+  <div class="absolute top-20 left-10 w-80 h-80 bg-elixir-600/15 rounded-full blur-3xl hidden dark:block"></div>
+
+  <div class="container-custom relative z-10">
+    <div class="max-w-3xl">
+      <span class="tag mb-4">每月活動</span>
+      <h1 class="text-gradient mb-6">Elixir Taiwan 小聚</h1>
+      <p class="text-xl leading-relaxed" style="color: var(--text-secondary);">
+        自 2015 年起，我們每月定期舉辦實體聚會。不論你是 Elixir 新手還是資深開發者，都歡迎加入我們的交流行列！
+      </p>
+    </div>
+  </div>
+</section>
+
+
+<section class="section" style="background-color: var(--section-alt-bg);">
+  <div class="container-custom">
+    <div class="card border-elixir-500/30 p-8 md:p-12" style="background: linear-gradient(to bottom right, rgba(139, 92, 246, 0.1), rgba(15, 23, 42, 0.1));">
+      <div class="grid lg:grid-cols-2 gap-8 items-center">
+        <div>
+          <span class="tag mb-4">下一場活動</span>
+          <h2 class="mb-6" style="color: var(--text-heading);">報名參加小聚</h2>
+          <div class="space-y-4 mb-6" style="color: var(--text-secondary);">
+            <div class="flex items-start gap-3">
+              <svg class="w-5 h-5 text-elixir-400 shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+              </svg>
+              <div>
+                <p class="font-medium" style="color: var(--text-heading);">時間</p>
+                <p>每月的某一個週二 19:30 開始（詳見活動頁面）</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-3">
+              <svg class="w-5 h-5 text-elixir-400 shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+              </svg>
+              <div>
+                <p class="font-medium" style="color: var(--text-heading);">地點</p>
+                <p><a href="https://maps.app.goo.gl/oDMwm2UrxuddiJY28" target="_blank" rel="noopener" class="hover:text-elixir-500">五倍學院</a>或<a href="https://maps.app.goo.gl/4TmXQ1PjYr4pPCRY7" target="_blank" rel="noopener" class="hover:text-elixir-500">言文字</a> @Taipei, Taiwan</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-3">
+              <svg class="w-5 h-5 text-elixir-400 shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+              </svg>
+              <div>
+                <p class="font-medium" style="color: var(--text-heading);">費用</p>
+                <p>免費（你只要付場地的低消即可！）</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex flex-wrap gap-4">
+            <a href="https://lu.ma/calendar/cal-gGZDVDM4NFE48Ks" target="_blank" rel="noopener" class="btn btn-primary">
+              <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+              </svg>
+              報名參加
+            </a>
+          </div>
+        </div>
+
+        <div class="hidden lg:block">
+          <div class="rounded-2xl overflow-hidden">
+            <img src="/images/meetup.png" alt="Elixir Taiwan 小聚" class="w-full h-auto rounded-2xl">
+          </div>
+          <p class="text-center mt-4 text-sm" style="color: var(--text-tertiary);">歡迎 Walk-in，無需報名也可以直接來參加！</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section" style="background-color: var(--bg-primary);">
+  <div class="container-custom">
+    <div class="text-center mb-16">
+      <h2 class="text-gradient mb-4">聚會流程</h2>
+      <p class="text-lg max-w-2xl mx-auto" style="color: var(--text-tertiary);">
+        輕鬆自在的交流形式，沒有笨問題，只有互動交流
+      </p>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-8">
+      <div class="card card-hover text-center">
+        <div class="w-16 h-16 rounded-full bg-elixir-600/20 flex items-center justify-center mx-auto mb-6">
+          <span class="text-2xl font-bold text-elixir-400">1</span>
+        </div>
+        <h3 class="text-xl font-semibold mb-3" style="color: var(--text-heading);">自我介紹</h3>
+        <p style="color: var(--text-secondary);">
+          19:30 開始，每個人簡單介紹自己和最近在玩的東西。有問題想討論也可以先提出來！
+        </p>
+        <p class="text-sm mt-3" style="color: var(--text-muted);">「我只是來聽聽」也完全 OK</p>
+      </div>
+
+      <div class="card card-hover text-center">
+        <div class="w-16 h-16 rounded-full bg-elixir-600/20 flex items-center justify-center mx-auto mb-6">
+          <span class="text-2xl font-bold text-elixir-400">2</span>
+        </div>
+        <h3 class="text-xl font-semibold mb-3" style="color: var(--text-heading);">主題分享</h3>
+        <p style="color: var(--text-secondary);">
+          成員輪流分享技術主題。沒有講者時，大家一起討論最近的話題，或挑戰 AOC、Exercism 題目。
+        </p>
+      </div>
+
+      <div class="card card-hover text-center">
+        <div class="w-16 h-16 rounded-full bg-elixir-600/20 flex items-center justify-center mx-auto mb-6">
+          <span class="text-2xl font-bold text-elixir-400">3</span>
+        </div>
+        <h3 class="text-xl font-semibold mb-3" style="color: var(--text-heading);">討論閒聊</h3>
+        <p style="color: var(--text-secondary);">
+          針對分享內容深入討論，或自由分組聊天。主題不限，技術、職涯、閒聊都歡迎！
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section" style="background-color: var(--section-alt-bg);">
+  <div class="container-custom">
+    <div class="text-center mb-16">
+      <h2 class="text-gradient mb-4">活動形式</h2>
+      <p class="text-lg max-w-2xl mx-auto" style="color: var(--text-tertiary);">
+        多元的活動內容，滿足不同學習需求
+      </p>
+    </div>
+
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div class="card">
+        <div class="feature-icon mb-4">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 4v16M17 4v16M3 8h4m10 0h4M3 12h18M3 16h4m10 0h4M4 20h16a1 1 0 001-1V5a1 1 0 00-1-1H4a1 1 0 00-1 1v14a1 1 0 001 1z"/>
+          </svg>
+        </div>
+        <h3 class="text-lg font-semibold mb-2" style="color: var(--text-heading);">主題分享</h3>
+        <p class="text-sm" style="color: var(--text-tertiary);">成員技術分享與經驗談</p>
+      </div>
+
+      <div class="card">
+        <div class="feature-icon mb-4">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z"/>
+          </svg>
+        </div>
+        <h3 class="text-lg font-semibold mb-2" style="color: var(--text-heading);">自由交流</h3>
+        <p class="text-sm" style="color: var(--text-tertiary);">開放式討論與問答</p>
+      </div>
+
+      <div class="card">
+        <div class="feature-icon mb-4">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
+          </svg>
+        </div>
+        <h3 class="text-lg font-semibold mb-2" style="color: var(--text-heading);">讀書會</h3>
+        <p class="text-sm" style="color: var(--text-tertiary);">一起研讀 Elixir 書籍</p>
+      </div>
+
+      <div class="card">
+        <div class="feature-icon mb-4">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/>
+          </svg>
+        </div>
+        <h3 class="text-lg font-semibold mb-2" style="color: var(--text-heading);">工作坊</h3>
+        <p class="text-sm" style="color: var(--text-tertiary);">實作練習與 Pair Programming</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section" style="background-color: var(--bg-primary);">
+  <div class="container-custom">
+    <div class="card border-elixir-500/30 p-8 md:p-12" style="background: linear-gradient(to bottom right, rgba(139, 92, 246, 0.1), rgba(15, 23, 42, 0.1));">
+      <div class="grid lg:grid-cols-2 gap-8 items-center">
+        <div>
+          <span class="tag mb-4">講者募集</span>
+          <h2 class="mb-4" style="color: var(--text-heading);">想要分享你的經驗嗎？</h2>
+          <p class="mb-6" style="color: var(--text-secondary);">
+            不管是最近在玩的小東西、工作上遇到的有趣問題、或是任何想要分享的 Elixir 主題，我們都非常歡迎！分享的時間長度可以自由調整，5 分鐘的 Lightning Talk 或 30 分鐘的深度分享都可以。
+          </p>
+          <div class="space-y-3 mb-6" style="color: var(--text-secondary);">
+            <p class="flex items-center gap-2">
+              <svg class="w-5 h-5 text-elixir-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+              </svg>
+              不需要是專家，學習心得也很棒
+            </p>
+            <p class="flex items-center gap-2">
+              <svg class="w-5 h-5 text-elixir-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+              </svg>
+              可以用中文或英文分享
+            </p>
+            <p class="flex items-center gap-2">
+              <svg class="w-5 h-5 text-elixir-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+              </svg>
+              我們會協助你準備內容
+            </p>
+          </div>
+          <a href="https://discord.com/invite/9zBmPfrrVP" target="_blank" rel="noopener" class="btn btn-primary">
+            聯絡我們報名
+          </a>
+        </div>
+
+        <div class="space-y-4">
+          <h3 class="text-lg font-semibold" style="color: var(--text-heading);">主題建議</h3>
+          <div class="grid grid-cols-2 gap-3">
+            
+            
+            <div class="flex items-center gap-2 text-sm" style="color: var(--text-secondary);">
+              <svg class="w-4 h-4 text-elixir-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+              </svg>
+              Elixir 基礎教學
+            </div>
+            
+            <div class="flex items-center gap-2 text-sm" style="color: var(--text-secondary);">
+              <svg class="w-4 h-4 text-elixir-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+              </svg>
+              Phoenix/LiveView
+            </div>
+            
+            <div class="flex items-center gap-2 text-sm" style="color: var(--text-secondary);">
+              <svg class="w-4 h-4 text-elixir-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+              </svg>
+              OTP 與 GenServer
+            </div>
+            
+            <div class="flex items-center gap-2 text-sm" style="color: var(--text-secondary);">
+              <svg class="w-4 h-4 text-elixir-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+              </svg>
+              Ecto 資料庫
+            </div>
+            
+            <div class="flex items-center gap-2 text-sm" style="color: var(--text-secondary);">
+              <svg class="w-4 h-4 text-elixir-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+              </svg>
+              測試與 CI/CD
+            </div>
+            
+            <div class="flex items-center gap-2 text-sm" style="color: var(--text-secondary);">
+              <svg class="w-4 h-4 text-elixir-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+              </svg>
+              效能調校
+            </div>
+            
+            <div class="flex items-center gap-2 text-sm" style="color: var(--text-secondary);">
+              <svg class="w-4 h-4 text-elixir-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+              </svg>
+              部署經驗
+            </div>
+            
+            <div class="flex items-center gap-2 text-sm" style="color: var(--text-secondary);">
+              <svg class="w-4 h-4 text-elixir-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+              </svg>
+              開源專案介紹
+            </div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section" style="background-color: var(--section-alt-bg);">
+  <div class="container-custom">
+    <div class="text-center mb-12">
+      <h2 class="text-gradient mb-4">過往活動紀錄</h2>
+      <p class="text-lg" style="color: var(--text-tertiary);">查看我們的 YouTube 頻道觀看活動錄影</p>
+    </div>
+
+    <div class="flex justify-center">
+      <a href="https://www.youtube.com/channel/UCzCRwQKbdBbW9-Vpr--ydZg" target="_blank" rel="noopener" class="btn btn-primary text-lg px-8 py-4">
+        <svg class="w-6 h-6 mr-2" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+        </svg>
+        觀看 YouTube 頻道
+      </a>
+    </div>
+  </div>
+</section>
+
+  </main>
+
+  <footer class="bg-dark-900 border-t border-dark-800">
+  <div class="container-custom py-12 md:py-16">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
+      
+      <div class="lg:col-span-1">
+        <a href="/" class="flex items-center gap-3 mb-4">
+          <img src="/images/elixir_tw.svg" alt="Elixir Taiwan" class="w-10 h-10">
+          <span class="font-bold text-xl text-gradient">Elixir Taiwan</span>
+        </a>
+        <p class="text-gray-400 text-sm leading-relaxed mb-4">
+          台灣 Elixir 程式語言社群，致力於推廣函數式程式設計與 Elixir 生態系。
+        </p>
+        
+        <div class="flex items-center gap-3">
+          
+          <a href="https://discord.com/invite/9zBmPfrrVP" target="_blank" rel="noopener" class="w-9 h-9 rounded-lg bg-dark-800 flex items-center justify-center text-gray-400 hover:text-elixir-400 hover:bg-dark-700 transition-all" aria-label="Discord">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028 14.09 14.09 0 0 0 1.226-1.994.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z"/>
+            </svg>
+          </a>
+          
+          
+          <a href="https://www.facebook.com/groups/elixir.tw" target="_blank" rel="noopener" class="w-9 h-9 rounded-lg bg-dark-800 flex items-center justify-center text-gray-400 hover:text-elixir-400 hover:bg-dark-700 transition-all" aria-label="Facebook">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+            </svg>
+          </a>
+          
+          
+          <a href="https://x.com/elixirtw" target="_blank" rel="noopener" class="w-9 h-9 rounded-lg bg-dark-800 flex items-center justify-center text-gray-400 hover:text-elixir-400 hover:bg-dark-700 transition-all" aria-label="X (Twitter)">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+            </svg>
+          </a>
+          
+          
+          <a href="https://www.youtube.com/channel/UCzCRwQKbdBbW9-Vpr--ydZg" target="_blank" rel="noopener" class="w-9 h-9 rounded-lg bg-dark-800 flex items-center justify-center text-gray-400 hover:text-elixir-400 hover:bg-dark-700 transition-all" aria-label="YouTube">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+            </svg>
+          </a>
+          
+        </div>
+      </div>
+
+      
+      <div>
+        <h4 class="font-semibold text-white mb-4">快速連結</h4>
+        <ul class="space-y-2">
+          <li><a href="/about" class="text-gray-400 hover:text-elixir-400 transition-colors text-sm">關於社群</a></li>
+          <li><a href="/what-is-elixir" class="text-gray-400 hover:text-elixir-400 transition-colors text-sm">什麼是 Elixir</a></li>
+          <li><a href="/why-elixir" class="text-gray-400 hover:text-elixir-400 transition-colors text-sm">為什麼選擇 Elixir</a></li>
+          <li><a href="/resources" class="text-gray-400 hover:text-elixir-400 transition-colors text-sm">學習資源</a></li>
+        </ul>
+      </div>
+
+      
+      <div>
+        <h4 class="font-semibold text-white mb-4">參與社群</h4>
+        <ul class="space-y-2">
+          <li><a href="/posts" class="text-gray-400 hover:text-elixir-400 transition-colors text-sm">部落格</a></li>
+          <li><a href="/consulting" class="text-gray-400 hover:text-elixir-400 transition-colors text-sm">顧問諮詢</a></li>
+          
+          <li><a href="https://discord.com/invite/9zBmPfrrVP" target="_blank" rel="noopener" class="text-gray-400 hover:text-elixir-400 transition-colors text-sm">加入 Discord</a></li>
+          
+        </ul>
+      </div>
+
+      
+      <div>
+        <h4 class="font-semibold text-white mb-4">相關資源</h4>
+        <ul class="space-y-2">
+          <li><a href="https://elixir-lang.org" target="_blank" rel="noopener" class="text-gray-400 hover:text-elixir-400 transition-colors text-sm">Elixir 官網</a></li>
+          <li><a href="https://elixirforum.com/" target="_blank" rel="noopener" class="text-gray-400 hover:text-elixir-400 transition-colors text-sm">Elixir Forum</a></li>
+          <li><a href="https://hex.pm" target="_blank" rel="noopener" class="text-gray-400 hover:text-elixir-400 transition-colors text-sm">Hex.pm</a></li>
+          <li><a href="https://phoenixframework.org" target="_blank" rel="noopener" class="text-gray-400 hover:text-elixir-400 transition-colors text-sm">Phoenix Framework</a></li>
+        </ul>
+      </div>
+    </div>
+
+    
+    <div class="mt-12 pt-8 border-t border-dark-800 flex flex-col md:flex-row justify-between items-center gap-4">
+      <p class="text-gray-500 text-sm">
+        &copy; 2025 Elixir Taiwan. All rights reserved.
+      </p>
+    </div>
+  </div>
+</footer>
+
+
+  
+</body>
+</html>

@@ -1,0 +1,129 @@
+{{ define "main" }}
+<article class="section">
+  <div class="container-custom">
+    <div class="max-w-4xl mx-auto">
+      <!-- Breadcrumb -->
+      <nav class="mb-8">
+        <ol class="flex items-center gap-2 text-sm" style="color: var(--text-tertiary);">
+          <li><a href="/" class="hover:text-elixir-400 transition-colors">首頁</a></li>
+          <li><span style="color: var(--border-primary);">/</span></li>
+          {{ if eq .Section "posts" }}
+          <li><a href="/posts/" class="hover:text-elixir-400 transition-colors">部落格</a></li>
+          <li><span style="color: var(--border-primary);">/</span></li>
+          {{ end }}
+          <li style="color: var(--text-secondary);">{{ .Title }}</li>
+        </ol>
+      </nav>
+
+      <!-- Article Header -->
+      <header class="mb-12">
+        {{ with .Params.tags }}
+        <div class="flex flex-wrap gap-2 mb-4">
+          {{ range . }}
+          <a href="/tags/{{ . | urlize }}/" class="tag hover:bg-elixir-600/30 transition-colors">{{ . }}</a>
+          {{ end }}
+        </div>
+        {{ end }}
+
+        <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-6" style="color: var(--text-heading);">{{ .Title }}</h1>
+
+        {{ with .Params.summary }}
+        <p class="text-xl leading-relaxed mb-6" style="color: var(--text-secondary);">{{ . }}</p>
+        {{ end }}
+
+        <div class="flex flex-wrap items-center gap-4 text-sm border-t pt-6" style="color: var(--text-tertiary); border-color: var(--border-primary);">
+          {{ with .Params.authorName }}
+          <div class="flex items-center gap-2">
+            {{ $authorId := $.Params.authorId }}
+            {{ if $authorId }}
+            <img src="https://github.com/{{ $authorId }}.png" alt="{{ . }}" class="w-8 h-8 rounded-full">
+            {{ end }}
+            <span>{{ . }}</span>
+          </div>
+          {{ end }}
+
+          <span style="color: var(--border-primary);">|</span>
+
+          <time datetime="{{ .Date.Format "2006-01-02" }}">
+            {{ .Date.Format "2006 年 01 月 02 日" }}
+          </time>
+
+          {{ if .Params.readTime }}
+          <span style="color: var(--border-primary);">|</span>
+          <span>{{ .ReadingTime }} 分鐘閱讀</span>
+          {{ end }}
+        </div>
+      </header>
+
+      <!-- Article Content -->
+      <div class="prose prose-lg max-w-none article-content">
+        {{ .Content }}
+      </div>
+
+      <!-- Author Box -->
+      {{ with .Params.authorName }}
+      <div class="mt-16 pt-8 border-t" style="border-color: var(--border-primary);">
+        <div class="card flex flex-col sm:flex-row items-center sm:items-start gap-6">
+          {{ $authorId := $.Params.authorId }}
+          {{ if $authorId }}
+          <img src="https://github.com/{{ $authorId }}.png" alt="{{ . }}" class="w-20 h-20 rounded-full ring-2 ring-elixir-500/50">
+          {{ end }}
+          <div class="text-center sm:text-left">
+            <h3 class="text-lg font-semibold mb-1" style="color: var(--text-heading);">{{ . }}</h3>
+            {{ if $authorId }}
+            <a href="https://github.com/{{ $authorId }}" target="_blank" rel="noopener" class="text-elixir-400 hover:text-elixir-300 text-sm">
+              @{{ $authorId }}
+            </a>
+            {{ end }}
+            <p class="mt-2" style="color: var(--text-tertiary);">Elixir Taiwan 社群成員</p>
+          </div>
+        </div>
+      </div>
+      {{ end }}
+
+      <!-- Giscus Comments -->
+      {{ if and .Site.Params.giscus.enable (eq .Section "posts") }}
+      <div class="mt-16 pt-8 border-t" style="border-color: var(--border-primary);">
+        <h3 class="text-xl font-semibold mb-6" style="color: var(--text-heading);">留言討論</h3>
+        <script src="https://giscus.app/client.js"
+                data-repo="{{ .Site.Params.giscus.repo }}"
+                data-repo-id="{{ .Site.Params.giscus.repoid }}"
+                data-category="{{ .Site.Params.giscus.category }}"
+                data-category-id="{{ .Site.Params.giscus.categoryid }}"
+                data-mapping="{{ .Site.Params.giscus.mapping }}"
+                data-strict="0"
+                data-reactions-enabled="1"
+                data-emit-metadata="0"
+                data-input-position="top"
+                data-theme="{{ .Site.Params.giscus.theme }}"
+                data-lang="{{ .Site.Params.giscus.datalang }}"
+                crossorigin="anonymous"
+                async>
+        </script>
+      </div>
+      {{ end }}
+
+      <!-- Navigation -->
+      <nav class="mt-16 pt-8 border-t" style="border-color: var(--border-primary);">
+        <div class="flex flex-col sm:flex-row justify-between gap-4">
+          {{ with .PrevInSection }}
+          <a href="{{ .RelPermalink }}" class="card card-hover flex-1 group">
+            <span class="text-sm mb-1 block" style="color: var(--text-tertiary);">上一篇</span>
+            <span class="group-hover:text-elixir-400 transition-colors" style="color: var(--text-heading);">{{ .Title }}</span>
+          </a>
+          {{ else }}
+          <div class="flex-1"></div>
+          {{ end }}
+
+          {{ with .NextInSection }}
+          <a href="{{ .RelPermalink }}" class="card card-hover flex-1 text-right group">
+            <span class="text-sm mb-1 block" style="color: var(--text-tertiary);">下一篇</span>
+            <span class="group-hover:text-elixir-400 transition-colors" style="color: var(--text-heading);">{{ .Title }}</span>
+          </a>
+          {{ end }}
+        </div>
+      </nav>
+    </div>
+  </div>
+</article>
+{{ end }}

@@ -1,0 +1,123 @@
+{{ define "main" }}
+<!-- Hero Section -->
+<section class="relative py-20 overflow-hidden" style="background-color: var(--bg-primary);">
+  <div class="absolute inset-0 bg-grid opacity-20 hidden dark:block"></div>
+  <div class="absolute top-10 right-20 w-64 h-64 bg-elixir-600/15 rounded-full blur-3xl hidden dark:block"></div>
+
+  <div class="container-custom relative z-10">
+    <div class="max-w-3xl">
+      <span class="tag mb-4">技術分享</span>
+      <h1 class="text-gradient mb-6">部落格</h1>
+      <p class="text-xl leading-relaxed" style="color: var(--text-secondary);">
+        技術文章、Meetup 筆記與社群動態。來自台灣 Elixir 開發者的經驗分享。
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- Posts List Section -->
+<section class="section" style="background-color: var(--section-alt-bg);">
+  <div class="container-custom">
+    {{ if .Pages }}
+    <div class="grid gap-6 max-w-4xl">
+      {{ range .Pages }}
+      <article class="card card-hover group">
+        <div class="flex flex-col md:flex-row gap-6">
+          <div class="flex-1">
+            <div class="flex flex-wrap items-center gap-2 mb-3">
+              {{ with .Params.tags }}{{ range first 3 . }}
+              <a href="/tags/{{ . | urlize }}/" class="tag text-xs hover:bg-elixir-600/30 transition-colors">{{ . }}</a>
+              {{ end }}{{ end }}
+            </div>
+            <h2 class="text-xl md:text-2xl font-semibold group-hover:text-elixir-400 transition-colors mb-3" style="color: var(--text-heading);">
+              <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+            </h2>
+            <p class="mb-4 line-clamp-2" style="color: var(--text-secondary);">
+              {{ with .Params.summary }}{{ . }}{{ else }}{{ .Summary | plainify | truncate 150 }}{{ end }}
+            </p>
+            <div class="flex flex-wrap items-center gap-4 text-sm" style="color: var(--text-tertiary);">
+              <time datetime="{{ .Date.Format "2006-01-02" }}">
+                {{ .Date.Format "2006-01-02" }}
+              </time>
+              {{ with .Params.authorName }}
+              <div class="flex items-center gap-2">
+                {{ $authorId := $.Params.authorId }}
+                {{ if $authorId }}
+                <img src="https://github.com/{{ $authorId }}.png" alt="{{ . }}" class="w-5 h-5 rounded-full">
+                {{ end }}
+                <span>{{ . }}</span>
+              </div>
+              {{ end }}
+              {{ if .Params.readTime }}
+              <span>{{ .ReadingTime }} 分鐘閱讀</span>
+              {{ end }}
+            </div>
+          </div>
+        </div>
+      </article>
+      {{ end }}
+    </div>
+
+    <!-- Pagination -->
+    {{ $paginator := .Paginator }}
+    {{ if gt $paginator.TotalPages 1 }}
+    <nav class="mt-12 flex justify-center">
+      <div class="flex items-center gap-2">
+        {{ if $paginator.HasPrev }}
+        <a href="{{ $paginator.Prev.URL }}" class="btn btn-secondary px-4 py-2">
+          <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+          </svg>
+          上一頁
+        </a>
+        {{ end }}
+
+        <span class="px-4 py-2" style="color: var(--text-secondary);">
+          第 {{ $paginator.PageNumber }} / {{ $paginator.TotalPages }} 頁
+        </span>
+
+        {{ if $paginator.HasNext }}
+        <a href="{{ $paginator.Next.URL }}" class="btn btn-secondary px-4 py-2">
+          下一頁
+          <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+          </svg>
+        </a>
+        {{ end }}
+      </div>
+    </nav>
+    {{ end }}
+
+    {{ else }}
+    <div class="card text-center py-16 max-w-2xl mx-auto">
+      <div class="w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6" style="background-color: var(--bg-tertiary);">
+        <svg class="w-10 h-10" style="color: var(--text-tertiary);" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z"/>
+        </svg>
+      </div>
+      <h3 class="text-xl font-semibold mb-2" style="color: var(--text-heading);">還沒有文章</h3>
+      <p class="mb-6" style="color: var(--text-secondary);">我們正在努力撰寫中，敬請期待！</p>
+      <a href="{{ .Site.Params.social.discord }}" target="_blank" rel="noopener" class="btn btn-primary">
+        加入社群交流
+      </a>
+    </div>
+    {{ end }}
+  </div>
+</section>
+
+<!-- CTA Section -->
+<section class="section" style="background-color: var(--bg-primary);">
+  <div class="container-custom text-center">
+    <h2 class="mb-4" style="color: var(--text-heading);">想要投稿文章嗎？</h2>
+    <p class="text-lg mb-8 max-w-xl mx-auto" style="color: var(--text-secondary);">
+      歡迎社群成員投稿技術文章、學習心得或 Meetup 筆記
+    </p>
+    <a href="https://github.com/elixirtw/elixirtw.github.io" target="_blank" rel="noopener" class="btn btn-outline">
+      <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
+        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+      </svg>
+      在 GitHub 上投稿
+    </a>
+  </div>
+</section>
+{{ end }}
